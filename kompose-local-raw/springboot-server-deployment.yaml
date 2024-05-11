@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.31.2 (a92241f79)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: springboot-server
+  name: springboot-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: springboot-server
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.31.2 (a92241f79)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/vegapp-default: "true"
+        io.kompose.service: springboot-server
+    spec:
+      containers:
+        - env:
+            - name: SPRING_DATASOURCE_PASSWORD
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:postgresql://postgresdb:5432/postgres
+            - name: SPRING_DATASOURCE_USERNAME
+              value: postgres
+          image: springboot-server
+          name: springboot-server
+          ports:
+            - containerPort: 8090
+              hostPort: 8080
+              protocol: TCP
+          resources: {}
+          stdin: true
+          tty: true
+      restartPolicy: Always
+status: {}

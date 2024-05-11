@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/background.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/* VeGApp logo of login.html */
+
+.form-logo {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px 20px 20px 20px;
+    width: 13%;
+    height: auto;
+}
+
+/* VeGApp logo of signup.html */
+
+.signup-logo {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    width: (2vw, 30px);
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Formulary box of login.html  */
+
+.form-box {
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #55c1a0;
+    padding: 50px 60px;
+    text-align: center;
+    border-radius: 20px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+/* Formulary box of signup.html  */
+
+.signup-formular-box {
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    top: 485px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #55c1a0;
+    padding: 50px 60px;
+    text-align: center;
+    border-radius: 20px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.welcome-header {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -60px;
+    z-index: 10;
+}
+
+.welcome-header h2 {
+    color: #fbae14;
+    font-size: clamp(30px, 3.2vw, 40px);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.form-box-header {
+    background-color: #0b815b;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.form-box-header h1 {
+    color: #fff;
+    font-size: clamp(25px, 3.2vw, 30px);
+    margin: 0;
+    position: relative;
+}
+
+.form-border-box-header::before,
+.form-border-box-header::after {
+    background-color: #0b815b;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.input-field {
+    background: #c4d0df;
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    width: 70%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+    font-size: 20px;
+}
+
+.btn-field {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.bi {
+    font-size: 1.5rem;
+    color: #0b815b;
+    padding-left: 10px;
+}
+
+.input-group-text {
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding-right: 10px;
+}
+
+.btn-field button {
+    padding: 20px 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 0px;
+    background: transparent;
+    position: relative;
+    transition: all 0.2s;
+    overflow: hidden;
+    color: #fff;
+    border-radius: 30px;
+    box-shadow: 0px 0px 0px 0px rgba(34, 87, 235, 0.5), 0px 0px 0px 0px rgba(29, 181, 29, 0.5);
+}
+
+.btn-field button::after {
+    content: "";
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    background-image: linear-gradient(225deg, #32ff67 0%, #0b815b 50%, #a61dff 100%);
+    z-index: -1;
+    transition: all 0.5s;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: center;
+}
+
+button:hover::after {
+    transform: rotate(150deg);
+}
+
+button:hover {
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px 0px rgba(143, 64, 248, 0.25), -10px 10px 25px 0px rgba(39, 200, 255, 0.25);
+}
+
+.btn-field button i {
+    color: inherit;
+}
+
+/* Message for errors */
+
+.hidden {
+    display: none;
+}
+
+#message {
+    font-family: "Arial", sans-serif;
+    color: #d8000c;
+    background-color: #ffd2d2;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}

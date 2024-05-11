@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Title of the webpage -->
+        <title>VeGApp</title>
+        <!-- Link to the CSS file -->
+        <link rel="stylesheet" href="../css/styles.css" />
+        <!-- Link to Bootstrap Icons library for icons used -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    </head>
+
+    <body style="display: none;">
+        <script>
+            if (sessionStorage.getItem("jwtToken")) {
+                window.location.href = "menu.html";
+            } else {
+                document.body.style.display = "block"; // Display the body if token is valid
+            }
+        </script>
+
+        <div class="container">
+            <!-- Logo VeGApp -->
+            <img src="../images/logo.png" alt="VeGApp Logo" class="form-logo" />
+            <div class="form-box">
+                <!-- Form header -->
+                <div class="form-box-header">
+                    <h1>Connect to your VeGApp Account</h1>
+                </div>
+
+                <!-- Login form -->
+                <form id="loginForm">
+                    <!-- Email input field -->
+                    <div class="input-group mb-3">
+                        <div class="input-field">
+                            <span class="input-group-text">
+                                <i class="bi bi-envelope-fill"></i>
+                            </span>
+                            <input type="email" id="email" class="form-control" placeholder="Email" required />
+                        </div>
+                        <!-- Password input field -->
+                        <div class="input-field">
+                            <span class="input-group-text">
+                                <i class="bi bi-lock-fill"></i>
+                            </span>
+                            <input type="password" id="password" class="form-control" placeholder="Password" required />
+                            <span class="input-group-text">
+                                <i id="togglePassword" class="bi bi-eye"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Message for displaying errors -->
+                    <div id="message" class="hidden"></div>
+
+                    <!-- Login button -->
+                    <div class="btn-field">
+                        <button type="button" onclick="loginUser()"><i class="bi bi-box-arrow-in-right"></i> Log In</button>
+                    </div>
+
+                    <!-- Link to sign up page -->
+                    <p style="text-align: center; margin-top: 20px;">Don't have an account? <a href="signup.html" style="color: #145bf1; text-decoration: none;">Sign Up!</a></p>
+                </form>
+            </div>
+        </div>
+        <script>
+            // Function to toggle password visibility
+            const togglePassword = document.querySelector("#togglePassword");
+            const passwordInput = document.querySelector("#password");
+
+            togglePassword.addEventListener("click", function (e) {
+                const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+                passwordInput.setAttribute("type", type);
+                this.classList.toggle("bi-eye");
+                this.classList.toggle("bi-eye-slash");
+            });
+
+            // Function to display the error messages
+            function showMessage(msg) {
+                const messageElement = document.getElementById("message");
+                messageElement.textContent = msg;
+                messageElement.classList.toggle("hidden", !msg);
+            }
+
+            // Function to authenticate user
+            async function loginUser() {
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
+
+                // Check if email or password is empty => print a message if it is the case
+                if (!email || !password) {
+                    showMessage("Please enter both email and password.");
+                    return;
+                }
+
+                const request = { email, password };
+
+                try {
+                    // Send authentication request to the Spring Boot Server //
+
+                    //const response = await fetch(`http://localhost:8090/auth/authenticate`, {
+                    const response = await fetch(`https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate`, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(request),
+                    });
+
+                    if (!response.ok) {
+                        throw new Error("Login failed");
+                    }
+
+                    // Extract token from the response
+                    const { token } = await response.json();
+                    console.log("Authentication successful:", token);
+
+                    // Store the token
+                    sessionStorage.setItem("jwtToken", token);
+
+                    href_token("menu.html");
+                } catch (error) {
+                    // Handle authentication error
+                    console.error("Error during authentication:", error);
+                    showMessage("Error during authentication: " + error.message);
+                }
+            }
+
+            // Function to redirect to another web page using the otken in the header //
+
+            function href_token(url) {
+                const token = sessionStorage.getItem("jwtToken");
+                if (!token) {
+                    console.error("No token found. Redirecting to login page.");
+                    window.location.href = "login.html"; // Redirect to login if no token
+                    return;
+                }
+
+                fetch(url, {
+                    method: "GET",
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                })
+                    .then((response) => {
+                        if (!response.ok) {
+                            throw new Error("Failed to fetch the page. Status: " + response.status);
+                        }
+                        return response.text();
+                    })
+                    .then((html) => {
+                        window.location.href = url;
+                    })
+                    .catch((error) => {
+                        console.error("Error during navigation:", error.message);
+                        alert("Failed to navigate: " + error.message);
+                    });
+            }
+
+            // Listen for Enter key press //
+            document.getElementById("loginForm").addEventListener("keydown", function (event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    loginUser();
+                }
+            });
+        </script>
+    </body>
+</html>

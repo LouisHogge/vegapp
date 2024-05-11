@@ -1,0 +1,13 @@
+{
+    "tests_config_authentication_controller": [
+        {"endpoint": "Post /auth", "description": "Test the creation of a User", "function": "test1"},
+        {"endpoint": "Post /auth/authenticate", "description": "Testing getting token without password", "function": "test2"}
+    ],
+    
+    "tests_config_synchronization_controller":[
+        {"endpoint": "Post /sync", "description": "Test the synchronization : Starting Sync", "function": "test1"},
+        {"endpoint": "Post /sync", "description": "Test the synchronization : No Two POST in Sync", "function": "test2"},
+        {"endpoint": "Delete /sync", "description": "Test the DELETE request after POST in the Synchronization", "function": "test3"},
+        {"endpoint": "PUT /sync", "description": "Test the synchronization", "function": "test4"}
+    ]
+}

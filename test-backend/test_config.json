@@ -1,0 +1,31 @@
+{
+    "tests_config_authentication_controller": [
+        {"endpoint": "Post /auth", "description": "Test the creation of a User", "function": "test1"},
+        {"endpoint": "Post /auth/authenticate", "description": "Testing getting token without password", "function": "test2"}
+    ],
+
+    "tests_config_garden_controller": [
+        {"endpoint": "Get /garden", "description": "Verify getting all gardens from DB works", "function": "test1"},
+        {"endpoint": "Get /garden/{name}", "description": "Wrong specific garden name from DB", "function": "test2"},
+        {"endpoint": "Post /garden", "description": "Create a garden", "function": "test3"},
+        {"endpoint": "Get /garden/{name}", "description": "Good specific garden name from DB", "function": "test4"},
+        {"endpoint": "Post /garden", "description": "Unique Garden Name", "function": "test5"},
+        {"endpoint": "Delete /garden/{name}", "description": "Delete a garden", "function": "test6"},
+        {"endpoint": "Put /garden", "description": "Test the PUT", "function": "test7"}
+    ],
+
+    "tests_config_vegetable_controller": [
+        {"endpoint": "Post /vegetable/{category_primary_name}/{garden_name}/{category_secondary_name}", "description": "Test the Post of the Vegetable", "function": "test1"},
+        {"endpoint": "Put /vegetable/{garden_name}/{category_primary_name_new}/{category_secondary_name_new}/{veggie_name}/{category_primary_name_old}/{category_secondary_name_old}", "description": "Test the PUT of the Vegetable", "function": "test2"}
+    ],
+
+    "tests_config_category_secondary_controller" : [
+        {"endpoint": "Post /categorySecondary/{garden_name}", "description": "Test the POST of the Category Secondary", "function": "test1"},
+        {"endpoint": "Put /categorySecondary/{garden_name}/{category_name}", "description": "Test the PUT of the Category Secondary", "function": "test2"},
+        {"endpoint": "Delete /categorySecondary/{name}", "description": "Test the DELETE of the Category Secondary", "function": "test3"}
+    ],
+
+    "tests_config_plot_controller" : [
+        {"endpoint": "Get /plot_years", "description": "Tests on the plot of a garden", "function": "test1"}
+    ]
+}

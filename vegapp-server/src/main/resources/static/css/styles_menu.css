@@ -1,0 +1,592 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  min-width: 500px;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  background-color: #eaf4f5;
+}
+
+/* ========================================================================================= */
+
+/* ===== Topbar ===== */
+
+.topbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 20%;
+  height: 75px;
+  background-color: #0b815b;
+  color: #ffffff;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border-bottom: 1px solid white;
+}
+
+/* Media query to ensure minimum sidebar width of 275px */
+@media (max-width: 1375px) {
+  .topbar {
+      left: 240px;
+  }
+}
+
+/* ===== Topbar Text ===== */
+
+.topbar-text {
+  font-size: min(2.5vw, 30px); /*====================*/
+  font-weight: bold;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.topbar-right {
+  font-size: min(2.5vw, 25px); /*====================*/
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== Logout Button ===== */
+
+.btn-log-out button {
+  margin-left: 10px;
+  padding: 0px 10px;
+  margin-right: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  position: relative;
+  transition: all 0.2s;
+  overflow: hidden;
+  color: #fff;
+  border-radius: 5px;
+  height: min(6vw, 50px);
+  box-shadow: 0px 0px 0px 0px rgba(255, 0, 0, 0.5), 0px 0px 0px 0px rgba(255, 0, 0, 0.5);
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-log-out button::after {
+  content: "";
+  width: 400px;
+  height: 100%;
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  background-image: linear-gradient(225deg, #a60000 0%, #df0f0f 50%, #a61dff 100%);
+  z-index: -1;
+  transition: all 0.5s;
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+}
+
+button:hover::after {
+  transform: rotate(150deg);
+}
+
+button:hover {
+  transform: translate(0, -6px);
+  box-shadow: 10px -10px 25px 0px rgba(143, 64, 248, 0.25), -10px 10px 25px 0px rgba(39, 200, 255, 0.25);
+}
+
+.btn-log-out button {
+  padding: 20px 40px;
+  margin-right: 20px;
+  font-size: min(2.5vw, 25px);
+  font-weight: bold;
+  cursor: pointer;
+  border: 0px;
+  background: transparent;
+  position: relative;
+  transition: all 0.2s;
+  overflow: hidden;
+  color: #fff;
+  border-radius: 30px;
+  box-shadow: 0px 0px 0px 0px rgba(255, 0, 0, 0.5), 0px 0px 0px 0px rgba(255, 0, 0, 0.5);
+}
+
+.btn-log-out button::after {
+  content: "";
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  background-image: linear-gradient(225deg, #df0f0f 0%, #df0f0f 50%, #a61dff 100%);
+  z-index: -1;
+  transition: all 0.5s;
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+}
+
+button:hover::after {
+  transform: rotate(150deg);
+}
+
+button:hover {
+  transform: translate(0, -6px);
+  box-shadow: 10px -10px 25px 0px rgba(143, 64, 248, 0.25), -10px 10px 25px 0px rgba(39, 200, 255, 0.25);
+}
+
+/* ========================================================================================= */
+
+/* Main Menu Sidebar */
+
+.sidebar {
+  height: 100vh;
+  width: 20%;
+  min-width: 240px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #0b815b;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #ffffff;
+}
+
+.menu-logo {
+  width: 100%;
+  max-width: 225px;
+  border-radius: 10px;
+  margin-top: 75px;
+}
+
+.download {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.above-text {
+  color: #fff;
+  top: calc(50% + 50px);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: clamp(25px, 3.2vw, 30px);
+  font-weight: bold;
+}
+
+#qrcode {
+  margin-top: 0px;
+  max-width: 225px;
+  height: 225px;
+  display: block;
+  z-index: 1;
+  border: 5px solid #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.qr-url {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#qr-url-input {
+  border: 2px solid #55c1a0;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  color: #000;
+  background: #fff;
+  margin-right: 10px;
+  width: calc(100% - 60px);
+  box-sizing: border-box;
+}
+
+.copy-btn {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: none;
+  color: #0b815b;
+  border-radius: 5px;
+}
+
+/* ===== Sidebar Menu ====== */
+
+.sidebar ol {
+  width: 80%;
+  padding: 0;
+  text-align: center;
+}
+
+.sidebar ol li {
+  display: flex;
+  align-items: center;
+}
+
+ol {
+  width: 300px;
+  list-style: none;
+}
+
+ol li {
+  margin: 10px 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: #55c1a0;
+  color: white;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  z-index: 5;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s;
+  display: block;
+}
+
+.sidebar ol li a {
+  font-size: 1.2rem;
+  display: block;
+  color: white;
+  width: 100%;
+  text-decoration: none;
+  padding: 13px 30px;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: min(2vw, 22px);
+  z-index: 5;
+  font-weight: bold;
+  transition: background-color 0.3s; /* For a hover effect */
+}
+
+/* ===== Border ====== */
+
+ol li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+ol li:hover::before {
+  width: 100%;
+}
+
+/* ===== COLOR FOR EACH ITEMS ===== */
+
+ol li:nth-child(1) {
+  background-color: #55c1a0;
+  font-size: 24px;
+}
+ol li:nth-child(2) {
+  background-color: #626060;
+  font-size: 24px;
+}
+
+ol li:nth-child(1)::before {
+  background: #4285f4;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+ol li:nth-child(2)::before {
+  background: #434345;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+ol li:hover {
+  transform: translateX(20px);
+}
+
+/* ========================================================================================= */
+
+/* =====  Main Box  ===== */
+
+.mainbox {
+  justify-content: center; /* Align items vertically in the center */
+  position: fixed;
+  top: 75px;
+  right: 0;
+
+  left: 20%;
+  bottom: 0;
+  background-color: #eaf4f5;
+  color: #b87dd7;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  padding: 0 10px;
+  border-bottom: 1px solid white;
+  overflow-y: auto;
+}
+
+/* Media query to ensure minimum sidebar width of 275px */
+@media (max-width: 1375px) {
+  .mainbox {
+      left: 240px;
+  }
+}
+
+/* =====  Title of the Main Box  ===== */
+
+.mainbox-text {
+  position: absolute;
+  top: 50 px;
+  left: 10px;
+  padding: 30px;
+  color: #0b815b;
+  background: transparent;
+  z-index: 10;
+  font-size: clamp(25px, 3.2vw, 35px);
+  font-weight: bold;
+}
+
+.horizontal-line {
+  width: 100%;
+  height: 1px;
+  background-color: #0b815b;
+  margin: 100px auto;
+}
+
+.garden-text {
+  position: absolute;
+  left: 4%;
+  font-size: 24px;
+  color: #0b815b;
+  text-align: center;
+  margin: 120px auto;
+}
+.my-garden-buttons-container {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  top: 175px;
+  left: calc(4%);
+  right: 4%;
+  align-items: flex-start;
+}
+
+.my-garden-btn {
+  flex: 1 1 calc(33.333% - 20px);
+  height: 125px;
+  background-color: #0b815b;
+  font-weight: bold;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: clamp(25px, 3.2vw, 30px);
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.my-garden-btn:hover {
+  background-color: #0a705a;
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 1200px) {
+  .my-garden-btn {
+      flex-basis: calc(50% - 20px); /* Two buttons per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .my-garden-btn {
+      flex-basis: 100%;
+  }
+}
+
+.my-garden-buttons-container .my-garden-btn:last-child {
+  background-color: #5e897c;
+}
+
+.my-garden-buttons-container .my-garden-btn:last-child .bi-plus {
+  font-size: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* ======================== */
+
+/* Pop Up Window in order to add a new Garden */
+
+.popup {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  width: 90%;
+  max-width: 700px;
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #55c1a0;
+  padding: 50px 60px;
+  text-align: center;
+  border-radius: 20px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.close {
+  color: rgba(236, 100, 82, 0.831);
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ff0000;
+}
+
+.popup-box-title {
+  background-color: #0b815b;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.popup-box-title h1 {
+  color: #fff;
+  font-size: 30px;
+  margin: 0;
+  position: relative;
+}
+
+.form-border-box-header::before,
+.form-border-box-header::after {
+  background-color: #0b815b;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.input-field {
+  background: #c4d0df;
+  margin: 15px 0;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  width: 70%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  padding: 18px 15px;
+  font-size: 20px;
+}
+
+.btn-field {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrot-icon {
+  font-size: 1.5rem;
+  color: #0b815b;
+  padding-left: 10px;
+}
+
+.input-group-text {
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding-right: 10px;
+}
+
+.form-container button {
+  width: 350px;
+  padding: 25px;
+  border: none;
+  border-radius: 3px;
+  background-color: #0b815b;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+  background-color: #0a705a;
+}
+
+/* ===== Error message if failed to create the garden ===== */
+
+.hidden {
+  display: none;
+}
+
+#message {
+  font-family: "Arial", sans-serif;
+  color: #d8000c;
+  background-color: #ffd2d2;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}

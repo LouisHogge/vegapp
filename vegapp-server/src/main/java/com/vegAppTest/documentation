@@ -1,0 +1,54 @@
+######################################################### Documentation #########################################################   
+
+note : search for !CHANGE! in the code for section that need to be adapted when the projects will evolve
+
+@OneToMany(fetch = FetchType.LAZY/EAGER,  mappedBy = "university", cascade = CascadeType.ALL)
+private List<Student_Entity> student_var;
+ /* 
+ - This is for the entity that will contain multiple other entities. (University contains multiple students)
+ - mappedBy makes Student entity the owner of the relationship by telling JPA to look at the university_id column in Student table
+ - cascade allows to reflect changes made on the contained entities (useful for deletion for example, or any change made)
+ - And if you want that entity to display which students it contains, a list of that entity must be made.
+ - Eager means will fetch all categories associated, Lazy means categories will only be fetched if requested 
+example : If you fetch university, with EAGER, you will fetch all the students that have the foreign key ID of that uni
+If it is LAZY, they won't be fetched unless asked.  */
+
+@ManyToOne
+@JoinColumn(name = "catalogue_id")
+@JsonIgnore
+private University_Entity university_var;
+/*
+- This is for the entity that will be contained by the other one (Students here)
+- The @JoinColumn allows to name the column in which the foreign key will be stored
+- @JsonIgnore to avoid Circular References (explained in it's respective section)
+- You need a reference of the entity that will give it's primary key
+*/
+
+https://medium.com/@arijit83work/bidirectional-relationship-using-onetomany-manytoone-annotation-in-spring-boot-3b91980ca222
+
+@OnDelete(action = OnDeleteAction.CASCADE) /* Allows to decide what action to take when class is deleted, and here cascade means all object contained 
+in the list of the deleted object will also be deleted */
+
+@JsonIgnore /* Allows to not add that field in the JSON body, which is cool since you can add fields you want to use in the server, but you don't want to be
+send in your API JSON bodies  */
+!! Allows to avoid infinite loops (Circular References) between objects that have bidirectional relationship  !! 
+
+
+@Validated (@Valid, @NotNull, @Size, etc.)  // Spring that allows to perform some checks before performing the controller function. Useful to check params !
+But not needed, indeed, to have more control over the validation process, we could validate with our requirements. 
+
+@Entity
+Important to leave a default constructor with nor args, to allow JPA to populate the entity.
+
+@Table(name = "role", uniqueConstraints = {@UniqueConstraint(columnNames = {"garden_id", "gardener_id"})})
+/*
+- This is for the constraints 
+- The columns of the table mentionned in @UniqueConstraint are treated like composite primary keys
+- There can't be 2 rows in the table that have the same values simultaneously for these two columns
+- (ex: If there is a row with |a|b| , there can't be another row with |a|b| but there can be a row with |a|c|)
+*/
+
+
+
+
+

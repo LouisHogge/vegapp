@@ -1,0 +1,185 @@
+variables:
+  # IMAGE_TAG: $CI_COMMIT_SHORT_SHA
+  IMAGE_TAG: latest
+  POSTGRESQL_DB: postgresdb
+  SPRINGBOOT_SERVER: vegapp-server
+  REGISTRY_URL: gitlab.uliege.be:5050
+  ## for gitlab image registry:
+  REPO_PATH: $REGISTRY_URL/speam/2023-2024/team-6
+  REGISTRY_HOST: gitlab.uliege.be:5050
+  # CI_DEPLOY_TOKEN_USER and CI_DEPLOY_TOKEN_PASS are defined in the secret store
+  PUSH_USER: $CI_DEPLOY_TOKEN_USER
+  PUSH_TOKEN: $CI_DEPLOY_TOKEN_PASS
+  POSTGRESS_PASSWORD_CICD: $POSTGRESS_PASSWORD_CICD
+  TOKEN_DOWNLOAD_APK: $TOKEN_DOWNLOAD_APK
+  TOKEN_PROJECT_ID: $TOKEN_PROJECT_ID
+  SSL_KEY_PASSWORD: $SSL_KEY_PASSWORD
+
+stages: # List of stages for grouping and sequencing jobs, and their order of execution
+  - test_backend
+  # - test_frontend
+  - test_synchronization
+  - prepare
+  - build_apk
+  - deploy
+
+backend_test:
+  stage: test_backend
+  rules:
+  - if: $CI_COMMIT_BRANCH != "main"
+    when: never
+  - changes:
+      paths:
+      - vegapp-server/**/*
+      - test-backend/**/*
+      # - $CI_CONFIG_PATH
+  tags:
+    - openshift
+    - docker
+  image: python:3.9 # Appropriate image for running the tests
+  before_script:
+    - pip install --upgrade pip # Upgrade pip to the latest version
+    - pip install -r test-backend/requirements.txt # Install the required packages for running the tests
+    - cd test-backend
+  script:
+    - python -B test-endpoints.py
+
+#frontend_test:
+  #stage: test_frontend
+  #rules:
+  #- if: $CI_COMMIT_BRANCH != "main"
+  #  when: never
+  #- changes:
+  #    paths:
+  #    - frontend/**/*
+  #    # - $CI_CONFIG_PATH
+  #tags:
+  #  - openshift
+  #  - docker
+  #image: instrumentisto/flutter:latest
+  #before_script:
+  #  - cd frontend
+  #  - flutter packages get
+  #script:
+  #  - flutter test
+
+synchro_test:
+  stage: test_synchronization
+  rules:
+  - if: $CI_COMMIT_BRANCH != "main"
+    when: never
+  - changes:
+      paths:
+      - frontend/**/*
+      - vegapp-server/**/*
+      - test-backend/**/*
+      - test-synchronization/**/*
+      # - $CI_CONFIG_PATH
+  tags:
+    - openshift
+    - docker
+  image: python:3.9
+  before_script:
+    - pip install --upgrade pip
+    - pip install -r test-synchronization/requirements.txt
+    - cd test-synchronization
+  script:
+    - python -B test-synchro.py
+
+postgresql_init:
+  stage: prepare
+  rules: # Conditional Job Execution
+  - if: $CI_COMMIT_BRANCH != "main"
+    when: never # This combination of rules specifies that the job will not run if the current commit is not on the main branch.
+  - changes: # Job runs only if there are changes in the paths specified
+      paths:
+      - postgresdb/**/* # Presence of **/* means that the job will run if there are changes in any file or directory within the postgresdb directory and its subdirectories.
+      # - $CI_CONFIG_PATH # This is a predefined variable that contains the path to the .gitlab-ci.yml file
+  tags: # required to select the Openshift Gitlab Runner with 'dind'
+    - openshift
+    - docker
+  image: docker:20.10.16
+  variables:
+    REPO_TAG: ${REPO_PATH}/${POSTGRESQL_DB}:${IMAGE_TAG}
+
+    DOCKER_HOST: tcp://docker:2376
+    DOCKER_TLS_CERTDIR: "/certs"
+    DOCKER_TLS_VERIFY: 1
+    DOCKER_CERT_PATH: "$DOCKER_TLS_CERTDIR/client"
+  services:
+    - docker:20.10.16-dind # that is the associated docker-in-docker daemon required by docker:20.10.16
+  before_script:
+    - sleep 10 && docker info #give time for starting the service and check in order
+    - echo $PUSH_TOKEN | docker login $REGISTRY_HOST -u $PUSH_USER --password-stdin
+  script:
+    - docker build --network host -t $REPO_TAG -f $POSTGRESQL_DB/Dockerfile-postgres ./$POSTGRESQL_DB
+    - docker push $REPO_TAG
+  after_script: # This will execute after the script regardless of the result
+    - docker logout $REGISTRY_URL
+
+springboot_init:
+  stage: prepare
+  rules: # Conditional Job Execution
+  - if: $CI_COMMIT_BRANCH != "main"
+    when: never
+  - changes:
+      paths:
+      - vegapp-server/**/*
+      # - $CI_CONFIG_PATH
+  tags: # required to select the Openshift Gitlab Runner with 'dind'
+    - openshift
+    - docker
+  image: docker:20.10.16
+  variables:
+    REPO_TAG: ${REPO_PATH}/${SPRINGBOOT_SERVER}:${IMAGE_TAG}
+
+    DOCKER_HOST: tcp://docker:2376
+    DOCKER_TLS_CERTDIR: "/certs"
+    DOCKER_TLS_VERIFY: 1
+    DOCKER_CERT_PATH: "$DOCKER_TLS_CERTDIR/client"
+  services:
+    - docker:20.10.16-dind # that is the associated docker-in-docker daemon required by docker:20.10.16
+  before_script:
+    - sleep 10 && docker info #give time for starting the service and check in order
+    - echo $PUSH_TOKEN | docker login $REGISTRY_HOST -u $PUSH_USER --password-stdin
+  script:
+    - docker build --network host -t $REPO_TAG -f $SPRINGBOOT_SERVER/Dockerfile ./$SPRINGBOOT_SERVER
+    - docker push $REPO_TAG
+  after_script: # This will execute after the script regardless of the result
+    - docker logout $REGISTRY_URL
+  
+# https://github.com/cirruslabs/docker-images-flutter
+# https://hub.docker.com/r/instrumentisto/flutter
+frontend_build_apk:
+  stage: build_apk
+  rules:
+  - if: $CI_COMMIT_BRANCH != "main"
+    when: never
+  - changes:
+      paths:
+      - frontend/**/*
+      # - $CI_CONFIG_PATH
+  tags:
+    - openshift
+    - docker
+  image: instrumentisto/flutter:latest
+  before_script:
+    - cd frontend
+    - flutter packages get
+    - flutter clean
+  script:
+    - flutter build apk
+  artifacts:
+    paths:
+      - frontend/build/app/outputs/flutter-apk/app-release.apk
+    expire_in: 1 week
+
+deploy_hook:
+  stage: deploy    # It only starts when the job(s) in the previous stages complete successfully
+  # no tags... it will run on the default (shared) gitlab runners
+  rules:
+   - if: $CI_COMMIT_BRANCH == "main"
+  script:
+    - echo "... placeholder for an OpenShift/kubernetes deployment trigger that is not yet configured ..."
+    - echo "Sorry! at this moment you have to force a redeployment manually via the OpenShift console"
+    - echo "END"

@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.31.2 (a92241f79)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: springboot-server
+  name: springboot-server
+spec:
+  ports:
+    - name: "8080"
+      port: 8080
+      targetPort: 8090
+    - name: "8090"
+      port: 8090
+      targetPort: 8090
+  selector:
+    io.kompose.service: springboot-server
+status:
+  loadBalancer: {}
