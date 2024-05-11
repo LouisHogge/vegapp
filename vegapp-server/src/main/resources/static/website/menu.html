@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Title of the webpage -->
+        <title>VeGApp - Main Menu</title>
+        <link rel="stylesheet" href="../css/styles_menu.css" />
+        <!-- Including Bootstrap Icons and Font Awesome for using icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    </head>
+    <body style="display: none;">
+        <script>
+            if (!sessionStorage.getItem("jwtToken")) {
+                window.location.href = "login.html";
+            } else {
+                document.body.style.display = "block"; // Display the body if token is valid
+            }
+        </script>
+
+        <!-- Topbar of the webpage -->
+
+        <div class="topbar">
+            <div class="topbar-text">
+                <i class="bi bi-house-fill" style="margin-left: 17px; margin-right: 17px; font-size: 2.5rem;"></i>
+                Main Menu
+            </div>
+            <div class="topbar-right">
+                <i class="bi bi-person-fill" style="margin-right: min(1vw, 5px);"></i>
+                <span id="gardenerName"></span>
+                <i class="bi bi-person-fill" style="margin-left: min(1vw, 5px);"></i>
+                <!-- Logout button of the webpage -->
+                <div class="btn-log-out">
+                    <button type="button" onclick="logout()">
+                        <i class="bi bi-box-arrow-right" style="font-size: min(2.5vw, 40px);"></i>
+                        Log Out
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar of the webpage -->
+
+        <div class="sidebar">
+            <!-- Logo image -->
+            <img src="../images/logo.png" alt="VeGApp Logo" class="menu-logo" />
+
+            <!-- VeGApp Download QR code -->
+            <div class="download">
+                <p class="above-text">
+                    Download VeGApp Here
+                </p>
+                <a href="#" id="qr-link" target="_blank">
+                    <div id="qrcode"></div>
+                </a>
+                <div class="qr-url">
+                    <input type="text" id="qr-url-input" placeholder="Copy the link here" value="https://www.google.com" readonly />
+                    <button onclick="copyToClipboard()" class="copy-btn">
+                        <i class="bi bi-clipboard"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Navigation List -->
+            <ol>
+                <li>
+                    <a href="app_authenticate.html" class="auth-link" style="color: inherit; text-decoration: none;"> <i class="fas fa-mobile-alt" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> Authenticate Here </a>
+                </li>
+                <li>
+                    <a href="accountsettings.html" class="settings-link" style="color: inherit; text-decoration: none;"> <i class="bi bi-gear-fill" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> Account Settings </a>
+                </li>
+            </ol>
+        </div>
+
+        <!-- Garderer's gardens -->
+
+        <div class="mainbox">
+            <div class="mainbox-text">Select a Garden</div>
+            <div class="horizontal-line"></div>
+            <div class="garden-text">My Personal Gardens</div>
+            <div class="my-garden-buttons-container"></div>
+        </div>
+
+        <!-- Pop-up for creation of Garden-->
+
+        <div class="popup" id="popupAddGarden" style="display: none;">
+            <div class="popup-content">
+                <span class="close" onclick="togglePopup()">&times;</span>
+                <div class="popup-box-title">
+                    <h1>Select a Name for your New Garden</h1>
+                </div>
+                <form>
+                    <div class="input-group mb-3">
+                        <div class="input-field">
+                            <span class="input-group-text">
+                                <i class="fas fa-carrot carrot-icon"></i>
+                            </span>
+                            <input type="text" id="new_garden_name" class="form-control" placeholder="Garden Name" required />
+                        </div>
+                    </div>
+                    <div id="message" class="hidden"></div>
+                    <div class="form-container">
+                        <button type="button" onclick="addGarden()">Create Garden</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script>
+            // === Function to fetch gardener information === //
+
+            function fetchGardenerInfo() {
+               
+                //fetch("http://localhost:8090/gardener", {
+                fetch("https://springboot-api.apps.speam.montefiore.uliege.be/gardener", {
+                    headers: {
+                        Authorization: `Bearer ${sessionStorage.getItem("jwtToken")}`,
+                    },
+                })
+                    .then((response) => response.text()) // Assuming the API returns plain text
+                    .then((data) => {
+                        const details = data.split(",");
+                        const firstName = details[0];
+                        const lastName = details[1];
+                        const gardenerName = `${firstName} ${lastName}`;
+                        document.getElementById("gardenerName").textContent = gardenerName;
+                    })
+                    .catch((error) => console.error("Error fetching gardener info:", error));
+            }
+
+            // == Function to copy the URL (content of the QR code)
+
+            function copyToClipboard() {
+                const qrUrlInput = document.getElementById("qr-url-input");
+                qrUrlInput.select();
+                document.execCommand("copy");
+
+                alert("Copied the URL: " + qrUrlInput.value);
+            }
+
+            // == Function to display the popup to add a garden == //
+
+            function togglePopup() {
+                var popup = document.getElementById("popupAddGarden");
+                popup.style.display = popup.style.display === "none" ? "block" : "none";
+            }
+
+            // == Function to logout from the session == //
+
+            function logout() {
+                sessionStorage.removeItem("jwtToken");
+                window.location.href = "login.html";
+            }
+
+            // == Function to fetch the garden related to the gardener ==//
+
+            function fetchGardens() {
+                const token = sessionStorage.getItem("jwtToken");
+
+                if (!token) {
+                    window.location.href = "login.html";
+                    return;
+                }
+
+                //fetch("http://localhost:8090/garden", {
+                fetch("https://springboot-api.apps.speam.montefiore.uliege.be/garden", {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        const container = document.querySelector(".my-garden-buttons-container");
+                        container.innerHTML = "";
+
+                        data.forEach((garden) => {
+                            const button = document.createElement("button");
+                            button.className = "my-garden-btn";
+                            button.textContent = garden.name;
+                            const encodedGardenName = encodeURIComponent(garden.name);
+                            button.onclick = () => (location.href = `garden_homepage.html?gardenId=${encodedGardenName}`);
+                            container.appendChild(button);
+                        });
+                        const addButton = document.createElement("button");
+                        addButton.className = "my-garden-btn add-garden-btn";
+                        addButton.innerHTML = '<i class="bi bi-plus"></i>';
+                        addButton.onclick = togglePopup;
+                        container.appendChild(addButton);
+                    })
+                    .catch((error) => {
+                        console.error("Error fetching gardens:", error);
+                    });
+            }
+
+            // == Function to fetch a html page using the token == //
+
+            function hrefToken(url) {
+                const token = sessionStorage.getItem("jwtToken");
+                if (!token) {
+                    console.error("No token found. Redirecting to login page.");
+                    window.location.href = "login.html"; // Redirect to login if no token
+                    return;
+                }
+
+                fetch(url, {
+                    method: "GET",
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                })
+                    .then((response) => {
+                        if (!response.ok) {
+                            throw new Error("Failed to fetch the page. Status: " + response.status);
+                        }
+                        return response.text();
+                    })
+                    .then((html) => {
+                        window.location.href = url;
+                    })
+                    .catch((error) => {
+                        console.error("Error during navigation:", error.message);
+                        alert("Failed to navigate: " + error.message);
+                    });
+            }
+
+            // == Event listener for the hrefTocken == //
+
+            document.addEventListener("DOMContentLoaded", function () {
+                var authLink = document.querySelector(".auth-link");
+                var settingsLink = document.querySelector(".settings-link");
+
+                fetchGardenerInfo();
+
+                authLink.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    hrefToken("app_authenticate.html");
+                });
+
+                settingsLink.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    hrefToken("accountsettings.html");
+                });
+            });
+
+            // == Function to create a new Garden == //
+            function addGarden(event) {
+                if (event) event.preventDefault();
+
+                const gardenName = document.getElementById("new_garden_name").value.trim();
+
+                if (!gardenName) {
+                    displayMessage("Please enter a garden name.");
+                    return;
+                }
+
+                const token = sessionStorage.getItem("jwtToken");
+                if (!gardenName || !token) {
+                    window.location.href = "login.html";
+                    return;
+                }
+                if (!gardenName) {
+                    alert("Please enter a garden name.");
+                    return;
+                }
+
+                //fetch("http://localhost:8090/garden", {
+                fetch("https://springboot-api.apps.speam.montefiore.uliege.be/garden", {
+                    method: "POST",
+                    headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${token}`,
+                    },
+                    body: JSON.stringify({ name: gardenName }),
+                })
+                    .then((response) => {
+                        if (response.ok) {
+                            return response.json();
+                        }
+                        throw new Error("Network response was not ok: " + response.statusText);
+                    })
+                    .then((data) => {
+                        console.log("Garden created:", data);
+                        location.reload();
+                    })
+                    .catch((error) => {
+                        console.error("Error during fetch operation:", error.message);
+                        // Display error message in the message section
+                        document.getElementById("message").textContent = "Failed to create the garden: Garden name already  used ! ";
+                        document.getElementById("message").classList.remove("hidden");
+                    });
+            }
+
+            // == Event listener when the content is fully loaded == //
+
+            document.addEventListener("DOMContentLoaded", function () {
+                var sidebarLinks = document.querySelectorAll(".sidebar ol li a");
+
+                sidebarLinks.forEach(function (link, index) {
+                    const href = link.getAttribute("href");
+
+                    link.setAttribute("href", `${href}`);
+                });
+
+                //const downloadUrl = 'https://www.google.com';
+
+                // Fetch the garden available
+                fetchGardens();
+
+                const latestArtifactUrl = "https://springboot-api.apps.speam.montefiore.uliege.be/latest-artifact";
+                //const latestArtifactUrl = "http://localhost:8090/auth/latest-artifact";
+
+                const qrLinkElement = document.getElementById("qr-link");
+                qrLinkElement.href = latestArtifactUrl;
+
+                const qrUrlInputElement = document.getElementById("qr-url-input");
+                qrUrlInputElement.value = latestArtifactUrl;
+
+                // Generate the QR code
+                var qrcode = new QRCode(document.getElementById("qrcode"), {
+                    text: latestArtifactUrl,
+                    width: 225,
+                    height: 225,
+                    colorDark: "#0B815B",
+                    colorLight: "#ffffff",
+                    correctLevel: QRCode.CorrectLevel.H,
+                });
+                const addButton = document.querySelector(".my-garden-btn");
+                addButton.addEventListener("click", togglePopup);
+            });
+
+            document.addEventListener("DOMContentLoaded", function () {
+                document.addEventListener("keydown", function (event) {
+                    if (event.key === "Enter") {
+                        event.preventDefault();
+
+                        if (document.getElementById("popupAddGarden").style.display === "block") {
+                            addGarden();
+                        }
+                    }
+                });
+
+                // Function to display messages in the message div
+                function displayMessage(msg) {
+                    const messageElement = document.getElementById("message");
+                    messageElement.textContent = msg;
+                    messageElement.classList.remove("hidden");
+                }
+            });
+        </script>
+    </body>
+</html>

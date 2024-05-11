@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Title of the webpage -->
+        <title>VeGApp - Delete Garden</title>
+        <link rel="stylesheet" href="../css/garden/styles_delete.css" />
+        <!-- Including Bootstrap Icons and Font Awesome for using icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    </head>
+    <body style="display: none;">
+        <script>
+            if (!sessionStorage.getItem("jwtToken")) {
+                window.location.href = "login.html";
+            } else {
+                document.body.style.display = "block"; // Display the body if token is valid
+            }
+        </script>
+
+        <!-- Topbar of the webpage -->
+
+        <div class="topbar">
+            <div class="topbar-text">
+                <i class="fas fa-trash-alt" style="margin-left: 17px; margin-right: 17px; font-size: 2.5rem;"></i>
+                Delete Garden
+            </div>
+            <div class="topbar-right">
+                <i class="fas fa-seedling" style="margin-right: min(1vw, 5px);"></i>
+                <span id="gardenName"></span>
+                <i class="fas fa-seedling" style="margin-left: min(1vw, 5px);"></i>
+                <!-- Logout button of the webpage -->
+                <div class="btn-log-out">
+                    <button type="button" onclick="logout()">
+                        <i class="bi bi-box-arrow-right" style="font-size: min(2.5vw, 40px);"></i>
+                        Log Out
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar of the webpage -->
+
+        <div class="sidebar">
+            <!-- Logo image -->
+            <img src="../images/logo.png" alt="VeGApp Logo" class="sidebar-logo" />
+            <!-- Navigation List -->
+            <ol>
+                <li>
+                    <a href="menu.html" style="color: inherit; text-decoration: none;"><i class="bi bi-house-fill" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> Main Menu</a>
+                </li>
+                <li>
+                    <a href="garden_homepage.html" style="color: inherit; text-decoration: none;"><i class="fas fa-carrot" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> My Garden</a>
+                </li>
+                <li>
+                    <a href="garden_history.html" style="color: inherit; text-decoration: none;"><i class="bi bi-clock-fill" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> Garden History</a>
+                </li>
+                <li>
+                    <a href="garden_permissions.html" style="color: inherit; text-decoration: none;"><i class="bi bi-people-fill" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> User Permissions</a>
+                </li>
+                <li>
+                    <a href="garden_addusers.html" style="color: inherit; text-decoration: none;"><i class="bi bi-person-plus-fill" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> Add New User</a>
+                </li>
+                <li>
+                    <a href="garden_rename.html" style="color: inherit; text-decoration: none;"><i class="fas fa-edit" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> Rename Garden </a>
+                </li>
+                <li>
+                    <a href="garden_delete.html" style="color: inherit; text-decoration: none;"><i class="fas fa-trash-alt" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> Delete Garden </a>
+                </li>
+                <li>
+                    <a href="accountsettings.html" style="color: inherit; text-decoration: none;"><i class="bi bi-gear-fill" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> Account Settings</a>
+                </li>
+            </ol>
+        </div>
+
+        <!-- Main content area -->
+
+        <div class="mainbox">
+            <div class="mainbox-text">Please click the button below to delete your garden :</div>
+
+            <!-- Button to open the popup to delete the garden -->
+
+            <div class="btn-select">
+                <button type="button" id="deleteButton" class="button-select">
+                    Delete Garden
+                </button>
+            </div>
+        </div>
+
+        <!-- Pop-up for deletion of Garden-->
+
+        <div class="popup" id="popupDeleteGarden" style="display: none;">
+            <div class="popup-content">
+                <span class="close" onclick="togglePopup()">&times;</span>
+                <div class="popup-box-title">
+                    <h1>Are you sure you want to delete your garden ?</h1>
+                </div>
+                <form>
+                    <div id="message" class="hidden">This process is irreversible</div>
+                    <div class="form-container">
+                        <button type="button" onclick="deleteGarden()">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            // == Event listener when the content is loaded == //
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const params = new URLSearchParams(window.location.search);
+                const gardenName = decodeURIComponent(params.get("gardenId") || "");
+                token = sessionStorage.getItem("jwtToken");
+
+                document.addEventListener("keypress", function (event) {
+                    if (event.key === "Enter") {
+                        event.preventDefault();
+                        deleteGarden();
+                    }
+                });
+
+                fetchGardenIdentifier(gardenName);
+                setupSidebarLinks(gardenName);
+                document.getElementById("deleteButton").addEventListener("click", togglePopup);
+            });
+
+            // == Function to setup the navigation list links == //
+
+            function setupSidebarLinks(gardenName) {
+                var sidebarLinks = document.querySelectorAll(".sidebar ol li a");
+                sidebarLinks.forEach(function (link, index) {
+                    const href = link.getAttribute("href");
+                    if (index !== 0 && index !== 7) {
+                        // Assuming links at positions 0 and 7 don't need the gardenId
+                        const encodedGardenName = encodeURIComponent(gardenName);
+                        link.setAttribute("href", `${href}?gardenId=${encodedGardenName}`);
+                    }
+                });
+            }
+
+            // == Function to delete the garden == //
+
+            function deleteGarden() {
+                const gardenId = sessionStorage.getItem("gardenId");
+
+                //fetch(`http://localhost:8090/garden/${gardenId}`, {
+                 fetch(`https://springboot-api.apps.speam.montefiore.uliege.be/garden/${gardenId}`, {
+                    method: "DELETE",
+                    headers: { Authorization: `Bearer ${token}` },
+                })
+                    .then((response) => {
+                        if (response.ok) {
+                            alert("Garden deleted successfully!");
+                            window.location.href = "menu.html";
+                        } else {
+                            throw new Error("Failed to delete garden");
+                        }
+                    })
+                    .catch((error) => {
+                        console.error("Error deleting garden:", error);
+                        displayMessage("Error deleting garden: " + error.message);
+                    });
+            }
+
+            // == Function for the popup to appear == //
+
+            function togglePopup() {
+                var popup = document.getElementById("popupDeleteGarden");
+                popup.style.display = popup.style.display === "none" ? "block" : "none";
+            }
+
+            // == Function to fetch the garden ID for the current garden (garden name) == //
+
+            function fetchGardenIdentifier(gardenName) {
+                
+                const apiEndpoint = `https://springboot-api.apps.speam.montefiore.uliege.be/garden/${encodeURIComponent(gardenName)}`;
+                //const apiEndpoint = `http://localhost:8090/garden/${encodeURIComponent(gardenName)}`;
+                fetch(apiEndpoint, {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        if (data && data.id) {
+                            document.getElementById("gardenName").textContent = data.name;
+                            sessionStorage.setItem("gardenId", data.id);
+                        } else {
+                            throw new Error("Garden not found or data is incomplete.");
+                        }
+                    })
+                    .catch((error) => {
+                        console.error("Fetch error:", error);
+                    });
+            }
+
+            // Function to display the error messages
+
+            function displayMessage(msg) {
+                const messageElement = document.getElementById("message");
+                messageElement.textContent = msg;
+                messageElement.classList.toggle("hidden", !msg);
+            }
+
+            // Function to logout of the session
+
+            function logout() {
+                sessionStorage.removeItem("jwtToken");
+                window.location.href = "login.html";
+            }
+        </script>
+    </body>
+</html>

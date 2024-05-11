@@ -1,0 +1,12 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: springboot-api
+  namespace: vegapp
+spec:
+  host: springboot-api.apps.speam.montefiore.uliege.be
+  to:
+    kind: Service
+    name: springboot-server
+  port:
+    targetPort: '8090'

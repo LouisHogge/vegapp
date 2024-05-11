@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Title of the webpage -->
+        <title>VeGApp - Garden History</title>
+        <link rel="stylesheet" href="../css/garden/styles_history.css" />
+        <!-- Including Bootstrap Icons and Font Awesome for using icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    </head>
+    <body style="display: none;">
+        <script>
+            if (!sessionStorage.getItem("jwtToken")) {
+                window.location.href = "login.html";
+            } else {
+                document.body.style.display = "block"; // Display the body if token is valid
+            }
+        </script>
+
+        <!-- Topbar of the webpage -->
+
+        <div class="topbar">
+            <div class="topbar-text">
+                <i class="bi bi-clock-fill" style="margin-left: 17px; margin-right: 17px; font-size: 2.5rem;"></i>
+                Garden History
+            </div>
+            <div class="topbar-right">
+                <i class="fas fa-seedling" style="margin-right: min(1vw, 5px);"></i>
+                <span id="gardenName"></span>
+                <i class="fas fa-seedling" style="margin-left: min(1vw, 5px);"></i>
+                <!-- Logout button of the webpage -->
+                <div class="btn-log-out">
+                    <button type="button" onclick="logout()">
+                        <i class="bi bi-box-arrow-right" style="font-size: min(2.5vw, 40px);"></i>
+                        Log Out
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar of the webpage -->
+
+        <div class="sidebar">
+            <!-- Logo image -->
+            <img src="../images/logo.png" alt="VeGApp Logo" class="sidebar-logo" />
+            <!-- Navigation List -->
+            <ol>
+                <li>
+                    <a href="menu.html" style="color: inherit; text-decoration: none;"><i class="bi bi-house-fill" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> Main Menu</a>
+                </li>
+                <li>
+                    <a href="garden_homepage.html" style="color: inherit; text-decoration: none;"><i class="fas fa-carrot" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> My Garden</a>
+                </li>
+                <li>
+                    <a href="garden_history.html" style="color: inherit; text-decoration: none;"><i class="bi bi-clock-fill" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> Garden History</a>
+                </li>
+                <li>
+                    <a href="garden_permissions.html" style="color: inherit; text-decoration: none;"><i class="bi bi-people-fill" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> User Permissions</a>
+                </li>
+                <li>
+                    <a href="garden_addusers.html" style="color: inherit; text-decoration: none;"><i class="bi bi-person-plus-fill" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> Add New User</a>
+                </li>
+                <li>
+                    <a href="garden_rename.html" style="color: inherit; text-decoration: none;"><i class="fas fa-edit" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> Rename Garden </a>
+                </li>
+                <li>
+                    <a href="garden_delete.html" style="color: inherit; text-decoration: none;"><i class="fas fa-trash-alt" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> Delete Garden </a>
+                </li>
+                <li>
+                    <a href="accountsettings.html" style="color: inherit; text-decoration: none;"><i class="bi bi-gear-fill" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> Account Settings</a>
+                </li>
+            </ol>
+        </div>
+
+        <!-- Main content area -->
+
+        <div class="mainbox">
+            <div class="mainbox-text">Please select the year, the date and the version to view garden history</div>
+
+            <!-- Dropdown n°1 (Year Selection) -->
+            <div class="dropdown-container" id="dropdown-container1">
+                <label class="dropdown-label">Year:</label>
+                <div class="dropdown">
+                    <div class="select">
+                        <span class="selected">20xx</span>
+                        <div class="caret"></div>
+                    </div>
+                    <ul class="menu"></ul>
+                </div>
+                <div id="matrix-container"></div>
+            </div>
+
+            <!-- Dropdown n°2 (Plot Name Selection) -->
+            <div class="dropdown-container" id="dropdown-container2">
+                <label class="dropdown-label">Plot Name:</label>
+                <div class="dropdown" id="dropdown2">
+                    <div class="select">
+                        <span class="selected">Plot x</span>
+                        <div class="caret"></div>
+                    </div>
+                    <ul class="menu" id="menu2"></ul>
+                </div>
+            </div>
+
+            <!-- Third Dropdown (Version Selection) -->
+
+            <div class="dropdown-container" id="dropdown-container3">
+                <label class="dropdown-label">Version:</label>
+                <div class="dropdown" id="dropdown3">
+                    <div class="select">
+                        <span class="selected">x</span>
+                        <div class="caret"></div>
+                    </div>
+                    <ul class="menu" id="menu3"></ul>
+                </div>
+            </div>
+
+            <div class="btn-select">
+                <button type="button" class="button-select">
+                    Display
+                </button>
+            </div>
+
+            <!-- Garden Plot Creation -->
+
+            <div id="gardenPlotContainer"></div>
+            <div id="gardenPlotHorizontalContainer"></div>
+        </div>
+
+        <script>
+            let token = "";
+            let gardenIdentifier = "";
+
+            // == Event listener when the content is loaded == //
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const params = new URLSearchParams(window.location.search);
+                const gardenName = decodeURIComponent(params.get("gardenId") || "");
+
+                token = sessionStorage.getItem("jwtToken");
+
+                var sidebarLinks = document.querySelectorAll(".sidebar ol li a");
+
+                sidebarLinks.forEach(function (link, index) {
+                    const href = link.getAttribute("href");
+                    if (index === 0 || index === 7) {
+                        link.setAttribute("href", `${href}`);
+                    } else {
+                        const encodedGardenName = encodeURIComponent(gardenName);
+                        link.setAttribute("href", `${href}?gardenId=${encodedGardenName}`);
+                    }
+                }); 
+
+                document.getElementById("gardenName").textContent = gardenName;
+
+                // Initialize dropdowns for interaction
+                initializeDropdowns();
+
+                fetchGardenIdentifier(gardenName);
+
+                // Fetch years for the dropdown
+
+                const displayButton = document.querySelector(".button-select");
+                displayButton.addEventListener("click", function () {
+                    fetchPlotDrawingInfo();
+                });
+            });
+
+            // == Function to fetch the garden ID for the current garden (garden name) == //
+
+            function fetchGardenIdentifier(gardenName) {
+                const apiEndpoint = `https://springboot-api.apps.speam.montefiore.uliege.be/garden/${encodeURIComponent(gardenName)}`;
+                //const apiEndpoint = `http://localhost:8090/garden/${encodeURIComponent(gardenName)}`;
+
+                fetch(apiEndpoint, {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                })
+                    .then((response) => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then((data) => {
+                        if (data && data.id) {
+                            // Assuming the garden object has an 'id' field
+
+                            gardenIdentifier = data.id; // Assign the fetched id to a local variable
+                            fetchYearsForGarden(gardenIdentifier);
+                        } else {
+                            throw new Error("Garden not found or data is incomplete.");
+                        }
+                    })
+                    .catch((error) => {
+                        console.error("Fetch error:", error);
+                        document.getElementById("gardenIdentifier").textContent = "Failed to fetch identifier";
+                    });
+            }
+
+            // == Function to initialise the dropdowns == //
+
+            function initializeDropdowns() {
+                const dropdowns = document.querySelectorAll(".dropdown");
+                dropdowns.forEach((dropdown) => {
+                    const select = dropdown.querySelector(".select");
+                    const caret = dropdown.querySelector(".caret");
+                    const menu = dropdown.querySelector(".menu");
+
+                    select.addEventListener("click", () => {
+                        // Check if prerequisites are met before allowing dropdown to open
+                        if (dropdown.parentNode.id === "dropdown-container2" && document.querySelector("#dropdown-container1 .select .selected").textContent === "20xx") {
+                            alert("Please select a year first.");
+                            return;
+                        }
+                        if (
+                            dropdown.parentNode.id === "dropdown-container3" &&
+                            (document.querySelector("#dropdown-container1 .select .selected").textContent === "20xx" || document.querySelector("#dropdown-container2 .select .selected").textContent === "Plot x")
+                        ) {
+                            alert("Please select both a year and a plot name first.");
+                            return;
+                        }
+                        if (dropdown.parentNode.id === "dropdown-container3" && document.querySelector("#dropdown-container2 .select .selected").textContent === "Plot x") {
+                            alert("Please select a plot name first.");
+                            return;
+                        }
+
+                        menu.classList.toggle("menu-open");
+                    });
+                });
+            }
+
+            // == Function to fetch years available for the current garden (to view garden history) == //
+
+            function fetchYearsForGarden(gardenIdentifier) {
+                const apiEndpoint = `https://springboot-api.apps.speam.montefiore.uliege.be/plot_years?garden_id=${gardenIdentifier}`;
+                //const apiEndpoint = `http://localhost:8090/plot_years?garden_id=${gardenIdentifier}`;
+
+                fetch(apiEndpoint, {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                })
+                    .then((response) => response.json())
+                    .then((years) => populateDropdown(years, "#dropdown-container1 .menu", yearSelected))
+                    .catch((error) => console.error("Failed to fetch years:", error));
+            }
+
+            // == Function to fetch plots available for the current garden //
+            //    and selected year (to view garden history) == //
+
+            function fetchPlotsForYear(gardenIdentifier, year) {
+                const apiEndpoint = `https://springboot-api.apps.speam.montefiore.uliege.be/plot_names?garden_id=${gardenIdentifier}&year=${year}`;
+                //const apiEndpoint = `http://localhost:8090/plot_names?garden_id=${gardenIdentifier}&year=${year}`;
+
+                fetch(apiEndpoint, {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                })
+                    .then((response) => response.json())
+                    .then((plots) => populateDropdown(plots, "#dropdown-container2 .menu", plotSelected))
+                    .catch((error) => console.error("Failed to fetch plots:", error));
+            }
+
+            function plotSelected(plotName) {
+                const year = document.querySelector("#dropdown-container1 .select .selected").textContent;
+                fetchVersionsForPlot(gardenIdentifier, year, plotName);
+
+                // Reset version dropdown
+                resetDropdown("#dropdown-container3 .select .selected", "x");
+                // Clear previous version options
+                clearDropdownOptions("#dropdown-container3 .menu");
+            }
+
+            // == Function to fetch version available for the current garden //
+            //    and selected year + plot name  (to view garden history) == //
+
+            function fetchVersionsForPlot(gardenIdentifier, year, plotName) {
+                const encodedPlotName = encodeURIComponent(plotName); 
+                const apiEndpoint = `https://springboot-api.apps.speam.montefiore.uliege.be/plot_versions?garden_id=${gardenIdentifier}&year=${year}&name=${encodedPlotName}`;
+                //const apiEndpoint = `http://localhost:8090/plot_versions?garden_id=${gardenIdentifier}&year=${year}&name=${plotName}`;
+
+                fetch(apiEndpoint, {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                })
+                    .then((response) => response.json())
+                    .then((versions) => populateDropdown(versions, "#dropdown-container3 .menu"))
+                    .catch((error) => console.error("Failed to fetch versions:", error));
+            }
+
+            function yearSelected(year) {
+                fetchPlotsForYear(gardenIdentifier, year);
+
+                // Reset plot name and version dropdowns
+                resetDropdown("#dropdown-container2 .select .selected", "Plot x");
+                resetDropdown("#dropdown-container3 .select .selected", "x");
+                // Clear previous plot name and version options
+                clearDropdownOptions("#dropdown-container2 .menu");
+                clearDropdownOptions("#dropdown-container3 .menu");
+            }
+
+            // == Functions to reset or clear dropdown choices == //
+
+            function resetDropdown(selector, defaultText) {
+                document.querySelector(selector).textContent = defaultText;
+            }
+
+            function clearDropdownOptions(selector) {
+                const menu = document.querySelector(selector);
+                menu.innerHTML = ""; // Clear previous options
+            }
+
+            // == Function to populate dropdown == //
+
+            function populateDropdown(items, selector, nextAction = null) {
+                const menu = document.querySelector(selector);
+                console.log("Items to populate:", items); // Add this to debug
+                menu.innerHTML = ""; // Clear previous entries
+                items.forEach((item) => {
+                    const li = document.createElement("li");
+                    li.textContent = item.toString(); // Ensure item is a string
+                    li.onclick = () => {
+                        document.querySelector(selector).previousElementSibling.querySelector(".selected").textContent = item;
+                        menu.classList.remove("menu-open"); // Close dropdown after selection
+                        if (nextAction) nextAction(item); // Fetch next dropdown data if any
+                    };
+                    menu.appendChild(li);
+                });
+            }
+
+            // == Function to fetch the information of the plot (structure the plot + content) == //
+
+            function fetchPlotDrawingInfo() {
+                const plotName = document.querySelector("#dropdown-container2 .select .selected").textContent;
+                const version = document.querySelector("#dropdown-container3 .select .selected").textContent;
+
+                const encodedPlotName = encodeURIComponent(plotName);
+
+                // Check if the selected values are not placeholders
+                if (plotName !== "Plot x" && version !== "x") {
+                    const apiEndpoint = `https://springboot-api.apps.speam.montefiore.uliege.be/plot/draw?garden_id=${gardenIdentifier}&name=${encodedPlotName}&version=${version}`;
+                    //const apiEndpoint = `http://localhost:8090/plot/draw?garden_id=${gardenIdentifier}&name=${encodedPlotName}&version=${version}`;
+
+                    fetch(apiEndpoint, {
+                        headers: {
+                            Authorization: `Bearer ${token}`,
+                        },
+                    })
+                        .then((response) => response.json())
+                        .then((data) => {
+                            createGardenPlot(data);
+                        })
+                        .catch((error) => console.error("Failed to fetch plot drawing info:", error));
+                } else {
+                    alert("Please select both a plot name and a version.");
+                }
+            }
+
+            // == Function to draw the garden plot == //
+
+            function createGardenPlot(data) {
+                if (data[1].split(": ")[1] === "1") {
+                    createGardenPlot_vertical(data);
+                }
+                if (data[1].split(": ")[1] === "0") {
+                    createGardenPlot_horizontal(data);
+                }
+            }
+
+            // == Function to draw the garden plot (vertical plot) == //
+
+            function createGardenPlot_vertical(data) {
+                const plotContainer = document.getElementById("gardenPlotContainer");
+                plotContainer.innerHTML = ""; // Clear previous plot
+                document.getElementById("gardenPlotHorizontalContainer").innerHTML = "";
+
+                // Extract lines info and compute number of columns and max number of rows
+                const linesInfo = data[0].split(": ")[1].split("/");
+                const mycol_nbr = linesInfo.length;
+                const rowsPerColumn = linesInfo.map((line) => parseInt(line.split(".")[1], 10)-1);
+                const maxRows = Math.max(...rowsPerColumn); // Find the maximum number of rows
+
+                // Place each plant in the grid array
+                const grid = Array.from({ length: mycol_nbr }, (_, index) => new Array(rowsPerColumn[index]).fill("Empty"));
+                data.slice(2).forEach((plantData) => {
+                    const plantInfo = plantData.split(", ");
+                    const plantName = plantInfo[2].split(": ")[1];
+                    const location = plantInfo[3].split(": ")[1].split(".");
+                    const col = parseInt(location[0]) - 1;
+                    const row = parseInt(location[1]);
+                    grid[col][row] = plantName;
+                });
+
+                // Create columns and rows
+                for (let colIndex = 0; colIndex < mycol_nbr; colIndex++) {
+                    // Create a new column
+                    const columnDiv = document.createElement("div");
+                    columnDiv.className = "plot-column";
+                    plotContainer.appendChild(columnDiv);
+
+                    // Create rows inside the column
+                    for (let rowIndex = 0; rowIndex < rowsPerColumn[colIndex] + 1; rowIndex++) {
+                        const rowDiv = document.createElement("div");
+
+                        if (grid[colIndex][rowIndex] && grid[colIndex][rowIndex] !== "Empty") {
+                            const plantNameSpan = document.createElement("span");
+                            plantNameSpan.className = "plant-name";
+                            plantNameSpan.textContent = grid[colIndex][rowIndex];
+                            rowDiv.appendChild(plantNameSpan);
+                        }
+                        rowDiv.className = "plot-row";
+                        rowDiv.style.height = 70 / (rowsPerColumn[colIndex] + 1) + "vw";
+                        columnDiv.appendChild(rowDiv);
+                    }
+                }
+            }
+
+            /*****************************/
+
+            // == Function to draw the garden plot (horizontal plot) == //
+
+            function createGardenPlot_horizontal(data) {
+                const plotContainer = document.getElementById("gardenPlotHorizontalContainer");
+                plotContainer.innerHTML = ""; // Clear previous plot
+                document.getElementById("gardenPlotContainer").innerHTML = "";
+
+                // Extract lines info and compute number of columns and max number of rows
+                const linesInfo = data[0].split(": ")[1].split("/");
+                const myrow_nbr = linesInfo.length;
+                const columnPerRow = linesInfo.map((line) => parseInt(line.split(".")[1], 10)-1);
+                const maxColumns = Math.max(...columnPerRow); // Find the maximum number of rows
+
+                const grid = Array.from({ length: myrow_nbr }, (_, rowIndex) => new Array(columnPerRow[rowIndex] + 1).fill("Empty"));
+
+                data.slice(2).forEach((plantData) => {
+                    const plantInfo = plantData.split(", ");
+                    const plantName = plantInfo[2].split(": ")[1];
+                    const location = plantInfo[3].split(": ")[1].split(".");
+                    const row = parseInt(location[0]) - 1;
+                    const col = parseInt(location[1]);
+                    grid[row][col] = plantName;
+                });
+
+                //
+
+                for (let rowIndex = 0; rowIndex < myrow_nbr; rowIndex++) {
+                    // Create a new row
+                    const rowDiv = document.createElement("div");
+                    rowDiv.className = "plot-rowhoriz";
+                    plotContainer.appendChild(rowDiv);
+
+                    // Create rows inside the column
+                    for (let colIndex = 0; colIndex < columnPerRow[rowIndex] + 1; colIndex++) {
+                        const colDiv = document.createElement("div");
+
+                        if (grid[rowIndex][colIndex] && grid[rowIndex][colIndex] !== "Empty") {
+                            const plantNameSpan = document.createElement("span");
+                            plantNameSpan.className = "plant-namehoriz";
+                            plantNameSpan.textContent = grid[rowIndex][colIndex];
+                            colDiv.appendChild(plantNameSpan);
+                        }
+                        colDiv.className = "plot-columnhoriz";
+                        colDiv.style.width = 75 / (columnPerRow[rowIndex] + 1) + "vw";
+                        rowDiv.appendChild(colDiv);
+                    }
+                }
+            }
+
+            // == Function to logout of the session == //
+
+            function logout() {
+                sessionStorage.removeItem("jwtToken");
+                window.location.href = "login.html";
+            }
+        </script>
+    </body>
+</html>
