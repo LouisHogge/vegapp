@@ -1,0 +1,44 @@
+version: "3.8"
+
+services: # A service is an abstract definition of a computing resource within an application which can be scaled or replaced independently from other components.
+  postgresdb:
+    #image: postgres # This is the default image for the postgresdb service. It bypasses custom build.
+    build:
+      context: ./postgresdb # The build context is the set of files located in the specified PATH or URL.
+      dockerfile: Dockerfile-postgres # The Dockerfile to use for the build.
+    # restart: unless-stopped
+    expose: # Expose ports without publishing them to the host machine - they’ll only be accessible to linked services. Only the internal port can be specified.
+      - 5432
+    ports:
+      - 5433:5432
+    volumes: # The volumes option mounts a host path as a data volume in the container.
+      - "db:/var/lib/postgresql/data"
+    environment: # The environment option specifies environment variables to set in the container.
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRESS_PASSWORD_CICD}
+      
+  springboot-server:
+    build: 
+      context: ./vegapp-server
+      dockerfile: Dockerfile
+    # restart: on-failure
+    # container_name: vegapp-server # Specifies a custom container name, rather than a generated default name.
+    expose: #This instruction exposes a port inside the container, making it accessible to linked services but not to the host machine.
+      - 8090
+    ports: # port1:port2 maps port1 on the host to port2 inside the container, allowing external access to the service running on port2 via port1 on the host machine.
+      - 8080:8090
+    depends_on: # Defines service dependencies. This tells Docker Compose to start 'postgresdb' service before 'app' service.
+      - postgresdb
+    stdin_open: true
+    tty: true
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresdb:5432/postgres
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=${POSTGRESS_PASSWORD_CICD}
+      - GITLAB_API_TOKEN=${TOKEN_DOWNLOAD_APK} # The three variables are defined after the first deployment in openshift so it has to be added as secrets in openshift to inject them into the already deployed application so that a redeployment isn't necessary
+      - GITLAB_PROJECT_ID=${TOKEN_PROJECT_ID}
+      - SSL_KEY_PASSWORD=${SSL_KEY_PASSWORD} 
+
+volumes:
+  db:

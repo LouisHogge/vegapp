@@ -1,0 +1,19 @@
+# Base image for the postgres database 
+FROM postgres
+
+USER root
+
+# COPY the modified script for setting up the database after PostgreSQL starts
+COPY ./postgres.sh /usr/local/bin/postgres.sh
+
+# Ensure the script is executable
+RUN chmod +x /usr/local/bin/postgres.sh
+
+# Switch back to the postgres user to run the PostgreSQL service
+USER postgres
+
+# PostgreSQL default listening port
+EXPOSE 5432
+
+# Customize the CMD directive to start PostgreSQL and then execute the custom script
+CMD ["sh", "-c", "docker-entrypoint.sh postgres & /usr/local/bin/postgres.sh"]

@@ -1,0 +1,1539 @@
+=== Starting Authentication Tests at 2024-05-05 03:53:36.547768 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 03:53:36.840906 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 202, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 202, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/202', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/204', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 03:53:37.960315 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/205', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/206', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 03:53:39.271586 ===
+=== Starting Authentication Tests at 2024-05-05 03:55:51.536778 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 03:55:51.793777 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 208, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 208, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/208', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/210', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 03:55:52.934951 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/211', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/212', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 03:55:54.308009 ===
+=== Starting Authentication Tests at 2024-05-05 03:56:47.797843 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 03:56:48.058842 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 214, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 214, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/214', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/216', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 03:56:49.258710 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/217', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/218', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 03:56:50.535713 ===
+=== Starting Authentication Tests at 2024-05-05 03:57:10.152275 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 03:57:10.403271 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 220, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 220, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/220', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/222', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 03:57:11.518460 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/223', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/224', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 03:57:12.825729 ===
+=== Starting Authentication Tests at 2024-05-05 03:58:16.476676 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 03:58:16.732676 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 226, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 226, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/226', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/228', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 03:58:17.849768 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/229', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/230', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 03:58:19.227592 ===
+=== Starting Authentication Tests at 2024-05-05 03:59:35.866417 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 03:59:36.136417 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 232, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 232, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/232', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/234', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 03:59:37.230420 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/235', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/236', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 03:59:38.509355 ===
+=== Starting Authentication Tests at 2024-05-05 04:00:49.121597 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 04:00:49.376597 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 238, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 238, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/238', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/240', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 04:00:50.472097 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/241', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/242', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 04:00:51.763095 ===
+=== Starting Authentication Tests at 2024-05-05 04:05:29.781895 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 04:05:30.044203 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 244, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 244, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/244', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/246', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 04:05:31.137716 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/247', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/248', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 04:05:32.443113 ===
+=== Starting Authentication Tests at 2024-05-05 04:11:26.459530 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 04:11:26.722528 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 251, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 251, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/251', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/253', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 04:11:27.799948 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/254', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/255', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 04:11:29.094411 ===
+=== Starting Authentication Tests at 2024-05-05 04:11:49.748608 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 04:11:49.999606 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 258, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 258, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/258', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/260', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 04:11:51.083305 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/261', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/262', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 04:11:52.344415 ===
+=== Starting Authentication Tests at 2024-05-05 04:14:08.977805 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 04:14:09.242802 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 265, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 265, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/265', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/267', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 04:14:10.368631 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/268', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/269', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 04:14:11.676506 ===
+=== Starting Authentication Tests at 2024-05-05 04:15:51.176009 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 04:15:51.449008 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 272, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 272, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/272', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/274', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 04:15:52.580732 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/275', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/276', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 04:15:56.888813 ===
+=== Starting Authentication Tests at 2024-05-05 04:16:21.504542 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 04:16:21.758540 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 279, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 279, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/279', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/281', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 04:16:22.898365 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/282', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/283', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 04:16:24.207525 ===
+=== Starting Authentication Tests at 2024-05-05 04:18:07.079701 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 04:18:07.346246 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 286, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 286, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/286', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/288', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 04:18:08.470966 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/289', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/290', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 04:18:09.752965 ===
+=== Starting Authentication Tests at 2024-05-05 04:22:08.640976 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 04:22:08.897974 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 293, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 293, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/293', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/295', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 04:22:10.008975 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/296', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/297', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 04:22:11.484705 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/298', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/299', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/300', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Authentication Tests at 2024-05-05 17:32:00.971146 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 17:32:02.329144 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 309, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 309, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/309', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/311', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 17:32:03.742186 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/312', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/313', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 17:32:05.307220 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/314', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/315', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/316', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Authentication Tests at 2024-05-05 17:38:11.707173 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 17:38:12.007176 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 317, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 317, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/317', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/319', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 17:38:13.376529 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/320', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/321', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 17:38:15.017550 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/322', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/323', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/324', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Authentication Tests at 2024-05-05 18:44:55.219953 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 18:44:55.533952 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 325, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 325, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/325', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/327', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 18:44:56.805184 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/328', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/329', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 18:44:58.202120 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/330', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/331', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/332', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-05 18:45:00.062240 ===
+=== Starting Authentication Tests at 2024-05-05 18:46:34.076484 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 18:46:34.381066 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 334, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 334, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/334', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/336', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 18:46:35.598081 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/337', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/338', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 18:46:37.082082 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/339', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/340', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/341', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-05 18:46:38.875079 ===
+=== Starting Authentication Tests at 2024-05-05 18:48:35.554735 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 18:48:35.825184 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 343, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 343, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/343', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/345', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 18:48:37.027837 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/346', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/347', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 18:48:38.429950 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/348', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/349', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/350', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-05 18:48:40.189184 ===
+=== Starting Authentication Tests at 2024-05-05 18:59:10.789227 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 18:59:12.122228 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 352, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 352, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/352', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/354', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 18:59:13.371629 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/355', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/356', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 18:59:14.761584 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/357', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/358', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/359', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-05 18:59:16.562367 ===
+=== Starting Authentication Tests at 2024-05-05 19:04:03.723642 ===
+=== Starting Authentication Tests at 2024-05-05 19:04:16.960311 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 19:04:17.852308 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 2, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 2, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/2', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/4', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 19:04:19.278827 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/5', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/6', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 19:04:20.815827 ===
+=== Starting Authentication Tests at 2024-05-05 19:05:31.396202 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 19:05:31.680205 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 10, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 10, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/10', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/12', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 19:05:32.979493 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/13', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/14', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 19:05:34.463912 ===
+=== Starting Authentication Tests at 2024-05-05 21:00:44.049578 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 21:00:44.477099 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 21, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 21, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/21', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/23', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 21:00:45.861952 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/24', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/25', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 21:00:47.409416 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/26', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/27', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/28', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-05 21:00:50.189809 ===
+=== Starting Authentication Tests at 2024-05-05 22:26:25.443603 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 22:26:25.769601 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 30, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 30, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/30', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/32', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 22:26:27.135601 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/33', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/34', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 22:26:28.587199 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/35', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/36', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/37', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-05 22:26:30.485918 ===
+=== Starting Authentication Tests at 2024-05-05 22:28:46.676703 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 22:28:46.949220 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 39, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 39, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/39', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/41', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 22:28:48.150530 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/42', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/43', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 22:28:49.540979 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/44', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/45', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/46', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-05 22:28:51.366502 ===
+=== Starting Authentication Tests at 2024-05-05 22:30:39.432508 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 22:30:39.691508 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 48, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 48, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/48', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/50', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 22:30:41.014506 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/51', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/52', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 22:30:42.683833 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/53', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/54', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/55', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-05 22:30:45.407338 ===
+=== Starting Authentication Tests at 2024-05-05 22:39:47.936312 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 22:39:48.242312 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 57, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 57, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/57', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/59', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 22:39:49.473367 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/60', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/61', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 22:39:50.885144 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/62', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/63', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/64', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-05 22:39:52.776455 ===
+=== Starting Authentication Tests at 2024-05-05 22:43:38.670393 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 22:43:38.941395 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 66, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 66, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/66', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/68', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 22:43:40.102945 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/69', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/70', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 22:43:41.632282 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/71', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/72', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/73', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-05 22:43:43.447797 ===
+=== Starting Authentication Tests at 2024-05-05 23:55:12.321706 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 23:55:12.669737 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 75, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 75, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/75', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/77', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 23:55:14.080901 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/78', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/79', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 23:55:15.693707 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/80', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/81', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/82', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-05 23:55:17.832154 ===
+=== Starting Authentication Tests at 2024-05-05 23:55:53.443448 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-05 23:55:53.713475 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 84, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 84, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/84', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/86', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-05 23:55:54.977901 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/87', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/88', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-05 23:55:56.465046 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/89', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/90', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/91', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-05 23:55:58.466194 ===
+=== Starting Authentication Tests at 2024-05-06 00:24:58.565423 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 00:24:58.864407 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 93, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 93, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/93', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/95', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 00:25:00.272222 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/96', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/97', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 00:25:01.852276 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/98', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/99', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/100', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 00:25:04.173089 ===
+=== Starting Authentication Tests at 2024-05-06 00:40:08.613186 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 00:40:08.921985 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 102, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 102, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/102', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/104', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 00:40:10.166518 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/105', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/106', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 00:40:11.663676 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/107', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/108', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/109', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 00:40:13.703578 ===
+=== Starting Authentication Tests at 2024-05-06 00:40:27.671659 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 00:40:27.953161 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 111, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 111, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/111', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/113', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 00:40:29.214789 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/114', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/115', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 00:40:30.664152 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/116', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/117', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/118', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 00:40:32.498676 ===
+=== Starting Authentication Tests at 2024-05-06 00:41:31.825127 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 00:41:32.092162 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 120, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 120, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/120', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/122', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 00:41:33.327741 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/123', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/124', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 00:41:34.713083 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/125', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/126', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/127', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 00:41:36.605369 ===
+=== Starting Authentication Tests at 2024-05-06 00:43:56.639176 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 00:43:56.918188 ===
+=== Starting Authentication Tests at 2024-05-06 00:44:11.005245 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 00:44:14.295443 ===
+=== Starting Authentication Tests at 2024-05-06 00:44:47.363890 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 00:44:47.647997 ===
+=== Starting Authentication Tests at 2024-05-06 00:46:24.891823 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 00:46:25.171353 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 132, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 132, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/132', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/134', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 00:46:26.514486 ===
+=== Starting Authentication Tests at 2024-05-06 00:47:08.043543 ===
+=== Starting Authentication Tests at 2024-05-06 00:52:33.172680 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 00:52:33.477144 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 136, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 136, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/136', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/138', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 00:52:34.698311 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/139', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/140', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 00:52:36.051282 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/141', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/142', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/143', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 00:52:37.856011 ===
+=== Starting Authentication Tests at 2024-05-06 00:53:39.141452 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 00:53:39.439868 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 145, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 145, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/145', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/147', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 00:53:40.632370 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/148', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/149', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 00:53:41.989152 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/150', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/151', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/152', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 00:53:43.814805 ===
+=== Starting Authentication Tests at 2024-05-06 00:55:29.921149 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 00:55:30.207158 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 154, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 154, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/154', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/156', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 00:55:31.397606 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/157', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/158', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 00:55:32.746713 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/159', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/160', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/161', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 00:55:34.580555 ===
+=== Starting Authentication Tests at 2024-05-06 01:13:31.999470 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 01:13:32.904840 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 2, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 2, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/2', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/4', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 01:13:34.425854 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/5', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/6', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 01:13:36.020982 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/7', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/8', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/9', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 01:13:38.058931 ===
+=== Starting Authentication Tests at 2024-05-06 01:26:29.671515 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 01:26:30.067473 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': [{'id': 11, 'name': 'test'}]}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 13, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 13, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/13', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/15', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 01:26:31.631854 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/16', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/17', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 01:26:33.257411 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/18', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/19', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/20', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 01:26:35.381121 ===
+=== Starting Authentication Tests at 2024-05-06 01:29:35.448397 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 01:29:35.997425 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': []}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 3, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 3, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/3', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/5', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 01:29:37.403600 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/6', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/7', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 01:29:38.978328 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/8', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/9', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/10', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 01:29:41.063495 ===
+=== Starting Authentication Tests at 2024-05-06 01:30:50.054154 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 01:30:50.318155 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': [{'id': 12, 'name': 'test'}]}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 13, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 13, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/13', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/15', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 01:30:51.563274 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/16', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/17', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 01:30:53.021158 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/18', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/19', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/20', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 01:30:55.071570 ===
+=== Starting Authentication Tests at 2024-05-06 01:32:14.652679 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 01:32:14.946632 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': [{'id': 12, 'name': 'test'}]}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 22, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 22, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/22', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/24', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 01:32:16.228219 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/25', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/26', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 01:32:17.638232 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/27', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/28', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/29', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 01:32:19.490291 ===
+=== Starting Authentication Tests at 2024-05-06 01:33:45.983932 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 01:33:46.257713 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': [{'id': 12, 'name': 'test'}]}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 33, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 33, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/33', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/35', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 01:33:47.489759 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/36', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/37', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 01:33:48.949279 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/38', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/39', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/40', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 01:33:50.821349 ===
+=== Starting Authentication Tests at 2024-05-06 01:41:20.602654 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 01:41:20.904191 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': [{'id': 12, 'name': 'test'}]}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 42, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 42, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/42', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/44', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 01:41:22.075221 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/45', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/46', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 01:41:23.523106 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/47', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/48', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/49', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 01:41:25.421223 ===
+=== Starting Authentication Tests at 2024-05-06 01:44:04.819974 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 01:44:05.107825 ===
+=== Starting Authentication Tests at 2024-05-06 01:45:17.513485 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 01:45:17.826032 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': [{'id': 12, 'name': 'test'}]}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 52, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 52, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/52', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/54', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 01:45:19.209535 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/55', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/56', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 01:45:20.792599 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/57', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/58', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/59', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 01:45:22.841114 ===
+=== Starting Authentication Tests at 2024-05-06 01:48:38.256999 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 01:48:38.522052 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': [{'id': 12, 'name': 'test'}]}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 62, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 62, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/62', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/64', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 01:48:39.826427 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/65', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/66', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 01:48:41.322810 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/67', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/68', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/69', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 01:48:43.322686 ===
+=== Starting Authentication Tests at 2024-05-06 01:53:27.190933 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 01:53:27.460537 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': [{'id': 12, 'name': 'test'}]}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 71, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 71, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/71', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/73', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 01:53:28.646323 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/74', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/75', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 01:53:30.064779 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/76', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/77', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/78', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 01:53:31.860549 ===
+=== Starting Authentication Tests at 2024-05-06 01:56:44.528260 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 01:56:44.795259 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': [{'id': 12, 'name': 'test'}]}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 80, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 80, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/80', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/82', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 01:56:46.002699 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/83', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/84', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 01:56:47.364908 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/85', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/86', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/87', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 01:56:49.182206 ===
+=== Starting Authentication Tests at 2024-05-06 01:57:14.627088 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 01:57:14.885091 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': [{'id': 12, 'name': 'test'}]}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 89, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 89, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/89', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/91', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 01:57:16.099406 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/92', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/93', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 01:57:17.455126 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/94', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/95', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/96', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 01:57:19.323287 ===
+=== Starting Authentication Tests at 2024-05-06 02:06:39.898526 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 02:06:40.162529 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': [{'id': 12, 'name': 'test'}]}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 99, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 99, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/99', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/101', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 02:06:41.328940 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/102', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/103', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 02:06:42.713394 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/104', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/105', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/106', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 02:06:44.536878 ===
+=== Starting Authentication Tests at 2024-05-06 02:07:46.845954 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 02:07:47.105852 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': [{'id': 12, 'name': 'test'}]}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 108, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 108, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/108', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/110', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 02:07:48.248966 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/111', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/112', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 02:07:49.586996 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/113', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/114', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/115', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 02:07:51.323096 ===
+=== Starting Authentication Tests at 2024-05-06 02:11:46.009474 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 02:11:46.494477 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': [{'id': 12, 'name': 'test'}]}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 117, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 117, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/117', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/119', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 02:11:47.730849 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/120', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/121', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 02:11:49.358639 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/122', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/123', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/124', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 02:11:52.156829 ===
+=== Starting Authentication Tests at 2024-05-06 02:11:59.390966 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 02:11:59.769000 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': [{'id': 12, 'name': 'test'}]}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 126, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 126, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/126', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/128', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 02:12:01.240615 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/129', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/130', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 02:12:02.668151 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/131', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/132', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/133', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 02:12:04.496500 ===
+=== Starting Authentication Tests at 2024-05-06 02:12:34.251779 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 02:12:34.615848 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': [{'id': 12, 'name': 'test'}]}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 135, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 135, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/135', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/137', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 02:12:35.979567 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/138', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/139', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 02:12:37.475345 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/140', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/141', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/142', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 02:12:39.976457 ===
+=== Starting Authentication Tests at 2024-05-06 02:13:32.946667 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 02:13:33.234188 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': [{'id': 12, 'name': 'test'}]}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 144, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 144, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/144', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/146', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 02:13:34.388659 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/147', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/148', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 02:13:35.676110 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/149', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/150', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/151', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 02:13:37.379670 ===
+=== Starting Authentication Tests at 2024-05-06 02:17:03.267936 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 02:17:03.529936 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': [{'id': 12, 'name': 'test'}]}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 153, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 153, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/153', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/155', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 02:17:04.693571 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/156', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/157', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 02:17:06.054837 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/158', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/159', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/160', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 02:17:07.753780 ===
+=== Starting Authentication Tests at 2024-05-06 02:17:17.704679 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 02:17:17.972694 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': [{'id': 12, 'name': 'test'}]}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 162, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 162, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/162', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/164', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 02:17:19.099862 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/165', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/166', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 02:17:20.410794 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/167', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/168', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/169', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 02:17:22.099465 ===
+=== Starting Authentication Tests at 2024-05-06 02:19:44.233919 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be', 'Status Code': 200, 'Success': True, 'Response of Server': 'User already created'}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/auth/authenticate', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+=== Authentication Tests Completed === 
+
+=== Starting Garden Tests at 2024-05-06 02:19:44.491773 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': [{'id': 12, 'name': 'test'}]}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/Garden of simon123', 'Status Code': 404, 'Success': True, 'Response of Server': {'id': None, 'name': None}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 171, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/test garden', 'Status Code': 200, 'Success': True, 'Response of Server': {'id': 171, 'name': 'test garden'}}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden', 'Status Code': 403, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/171', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/173', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Garden Tests Completed ===
+
+=== Starting Vegetable Tests at 2024-05-06 02:19:45.691941 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/174', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/175', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Vegetable Tests Completed ===
+
+=== Starting Category Secondary Tests at 2024-05-06 02:19:46.985186 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/176', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/177', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/178', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Category Secondary Tests Completed ===
+
+=== Starting Plot Tests at 2024-05-06 02:19:48.714427 ===
+{'Url': 'https://springboot-api.apps.speam.montefiore.uliege.be/garden/179', 'Status Code': 200, 'Success': True, 'Response of Server': ''}
+=== Plot Tests Completed ===
+

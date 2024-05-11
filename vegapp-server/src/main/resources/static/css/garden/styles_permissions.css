@@ -1,0 +1,577 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  background-color: #eaf4f5;
+}
+
+/* ========================================================================================= */
+
+/* ===== Topbar ===== */
+
+.topbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 20%;
+  height: 75px;
+  background-color: #0329a1;
+  color: #ffffff;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border-bottom: 1px solid white;
+}
+
+/* ===== Topbar Title ===== */
+
+.topbar-text {
+  font-size: min(2.5vw, 30px);
+  font-weight: bold;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.topbar-right {
+  font-size: min(2vw, 25px);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== Logout Button ===== */
+
+.btn-log-out button {
+  margin-left: 10px;
+  padding: 0px 10px;
+  margin-right: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  position: relative;
+  transition: all 0.2s;
+  overflow: hidden;
+  color: #fff;
+  border-radius: 5px;
+  height: min(2.5vw, 50px);
+  box-shadow: 0px 0px 0px 0px rgba(255, 0, 0, 0.5), 0px 0px 0px 0px rgba(255, 0, 0, 0.5);
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-log-out button::after {
+  content: "";
+  width: 400px;
+  height: 100%;
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  background-image: linear-gradient(225deg, #a60000 0%, #df0f0f 50%, #a61dff 100%);
+  z-index: -1;
+  transition: all 0.5s;
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+}
+
+button:hover::after {
+  transform: rotate(150deg);
+}
+
+button:hover {
+  transform: translate(0, -6px);
+  box-shadow: 10px -10px 25px 0px rgba(143, 64, 248, 0.25), -10px 10px 25px 0px rgba(39, 200, 255, 0.25);
+}
+
+.btn-log-out button {
+  padding: 20px 40px;
+  margin-right: 20px;
+  font-size: min(2.5vw, 25px);
+  font-weight: bold;
+  cursor: pointer;
+  border: 0px;
+  background: transparent;
+  position: relative;
+  transition: all 0.2s;
+  overflow: hidden;
+  color: #fff;
+  border-radius: 30px;
+  box-shadow: 0px 0px 0px 0px rgba(255, 0, 0, 0.5), 0px 0px 0px 0px rgba(255, 0, 0, 0.5);
+}
+
+.btn-log-out button::after {
+  content: "";
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  background-image: linear-gradient(225deg, #df0f0f 0%, #df0f0f 50%, #a61dff 100%);
+  z-index: -1;
+  transition: all 0.5s;
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+}
+
+button:hover::after {
+  transform: rotate(150deg);
+}
+
+button:hover {
+  transform: translate(0, -6px);
+  box-shadow: 10px -10px 25px 0px rgba(143, 64, 248, 0.25), -10px 10px 25px 0px rgba(39, 200, 255, 0.25);
+}
+
+/* ========================================================================================= */
+
+/* ===== Sidebar ===== */
+
+.sidebar {
+  height: 100vh;
+  width: 20%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #0b815b;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #ffffff;
+}
+
+/* ===== Sidebar Logo ====== */
+
+.sidebar-logo {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+/* ===== Sidebar Menu ====== */
+
+.sidebar ol {
+  width: 80%;
+  padding: 0;
+  text-align: center;
+}
+
+.sidebar ol li {
+  display: flex;
+
+  align-items: center;
+}
+
+ol {
+  width: 300px;
+  list-style: none;
+}
+
+ol li {
+  margin: 10px 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: #55c1a0;
+  color: white;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  z-index: 5;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s;
+  display: block;
+}
+
+.sidebar ol li a {
+  font-size: 1.2rem;
+  display: block;
+  color: white;
+  width: 100%;
+  text-decoration: none;
+  padding: 13px 30px;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  font-size: min(2vw, 22px);
+  z-index: 5;
+  font-weight: bold;
+  transition: background-color 0.3s; /* For a hover effect */
+}
+
+/* ===== Border ====== */
+
+ol li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+ol li:hover::before {
+  width: 100%;
+}
+
+/* ===== COLOR FOR EACH ITEMS ===== */
+
+ol li:nth-child(1) {
+  background-color: #db4437;
+  font-size: 24px;
+}
+ol li:nth-child(2) {
+  background-color: #55c1a0;
+  font-size: 24px;
+}
+ol li:nth-child(3) {
+  background-color: #55c1a0;
+  font-size: 24px;
+}
+ol li:nth-child(4) {
+  background-color: #0329a1;
+  font-size: 24px;
+  transform: translateX(20px);
+}
+ol li:nth-child(5) {
+  background-color: #55c1a0;
+  font-size: 24px;
+}
+ol li:nth-child(6) {
+  background-color: #55c1a0;
+  font-size: 24px;
+}
+ol li:nth-child(7) {
+  background-color: #55c1a0;
+  font-size: 24px;
+}
+ol li:nth-child(8) {
+  background-color: #626060;
+  font-size: 24px;
+}
+
+ol li:nth-child(1)::before {
+  background: #b91d3e;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+ol li:nth-child(2)::before {
+  background: #f0a904;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+ol li:nth-child(3)::before {
+  background: #b87dd7;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+ol li:nth-child(4)::before {
+  background: #0329a1;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+ol li:nth-child(5)::before {
+  background: #4285f4;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+ol li:nth-child(6)::before {
+  background: #08b664;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+ol li:nth-child(7)::before {
+  background: #ff0032;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+ol li:nth-child(8)::before {
+  background: #434345;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+ol li:hover {
+  transform: translateX(20px);
+}
+
+/* ========================================================================================= */
+
+/* =====  Main Box  ===== */
+
+.mainbox {
+  justify-content: center; /* Align items vertically in the center */
+  position: fixed;
+  top: 75px;
+  right: 0;
+  left: 20%;
+  bottom: 0;
+  background-color: #eaf4f5;
+  color: #0329a1;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  padding: 0 10px;
+  border-bottom: 1px solid white;
+  overflow-y: auto;
+}
+
+/* =====  Title of the Main Box  ===== */
+
+.mainbox-text {
+  position: absolute;
+  top: 50 px;
+  left: 10px;
+  padding: 30px;
+  font-size: clamp(20px, 3.2vw, 35px);
+  color: #0b815b;
+  background: transparent;
+  z-index: 10;
+  font-weight: bold;
+}
+
+/* ------------------------------------------------- */
+
+/* ===== Radio Buttons ===== */
+
+/* ===== Radio Buttons Container ===== */
+
+.radio-buttons-container {
+  display: absolute;
+  flex-direction: column;
+  margin-bottom: 50px;
+  padding-top: 150px;
+  padding-left: 40px;
+}
+
+/* ===== Radio Element (of the container) ===== */
+
+.radio-element {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-left: 40px;
+}
+
+/* ===== Style for radio button description text (left side) ===== */
+
+.role-left-description {
+  color: #0329a1;
+  margin-right: 30px;
+  font-size: min(3.2vw, 35px);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* ===== Style for radio button description text (right side) ===== */
+
+.role-right-description {
+  color: #706c6b;
+  margin-left: 30px;
+  font-size: min(3.2vw, 35px);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.radio input[type="radio"] {
+  display: none;
+}
+
+/* ===== Style of radio button ===== */
+
+.radio span {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  margin-left: 5px;
+  vertical-align: middle;
+  position: relative;
+  border-radius: 50%;
+  border: 3px solid #4285f4;
+  cursor: pointer;
+}
+
+/* ===== Style of inner circle of radio button ===== */
+
+.radio span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  height: 17px;
+  width: 17px;
+  background: #4285f4;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.radio input[type="radio"]:checked + span:after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* ===== Custom Padding (for Centering) ===== */
+
+.radio-element:nth-child(1) {
+  padding-left: 40px;
+}
+
+.radio-element:nth-child(2) {
+  padding-left: 136px;
+}
+
+.radio-element:nth-child(3) {
+  padding-left: 120px;
+}
+
+/* ------------------------------------------------- */
+
+/* =====  Grant Permission Button  ===== */
+
+.btn-select {
+  position: absolute;
+  margin-top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.button-select {
+  padding: 20px 40px;
+  font-size: 1.77rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: 0px;
+  background: transparent;
+  position: relative;
+  transition: all 0.2s;
+  overflow: hidden;
+  color: #fff;
+  border-radius: 30px;
+}
+
+.button-select::after {
+  content: "";
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  background-image: linear-gradient(225deg, #0f4fb6 0%, #0329a1 50%, rgb(70, 116, 223) 100%);
+  z-index: -1;
+  transition: all 0.5s;
+  border-radius: inherit;
+}
+
+.button-select:hover::after {
+  transform: rotate(150deg);
+}
+
+.button-select:hover {
+  box-shadow: 10px -10px 25px rgba(143, 64, 248, 0.25), -10px 10px 25px rgba(39, 200, 255, 0.25);
+  transform: translateY(-6px);
+}
+
+/*  Dropdown Menu  */
+
+.dropdown-container {
+  position: absolute;
+  top: 75px;
+  box-sizing: border-box;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.dropdown-label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.dropdown {
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+.select {
+  background: #0329a1;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #0329a1;
+  border-radius: 0.2em;
+  padding: 0.9em;
+  font-size: 0.8em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  flex-grow: 1;
+}
+
+.select:hover {
+  background: #0b815b;
+  border: 2px solid #0b815b;
+}
+
+.caret {
+  width: 0;
+  height: 0;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+  border-top: 20px solid #fff;
+  transition: transform 0.3s;
+  margin-left: 1em;
+}
+
+.menu {
+  list-style: none;
+  padding: 0.2em 0.5em;
+  background: #0b815b;
+  border: 1px solid #0b815b;
+  box-shadow: 0 0.5em 1em rgba(43, 74, 173, 0.2);
+  border-radius: 0.5em;
+  top: 3.25em;
+  color: #fff;
+  position: absolute;
+  left: 7.2em;
+  transform: translateX(-50%);
+  opacity: 0;
+  display: none;
+  transition: opacity 0.2s;
+  z-index: 100;
+}
+
+.menu li {
+  padding: 0.7em 0.5em;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-size: 0.7em;
+  font-weight: bold;
+}
+
+.menu li:hover {
+  background-color: #55c1a0;
+}
+
+.menu-open {
+  display: block;
+  opacity: 1;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Title of the webpage -->
+        <title>VeGApp - Add New User</title>
+        <link rel="stylesheet" href="../css/garden/styles_addusers.css" />
+        <!-- Including Bootstrap Icons and Font Awesome for using icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    </head>
+    <body style="display: none;">
+        <script>
+            if (!sessionStorage.getItem("jwtToken")) {
+                window.location.href = "login.html";
+            } else {
+                document.body.style.display = "block"; // Display the body if token is valid
+            }
+        </script>
+
+        <!-- Topbar of the webpage -->
+
+        <div class="topbar">
+            <div class="topbar-text">
+                <i class="bi bi-person-plus-fill" style="margin-left: 17px; margin-right: 17px; font-size: 2.5rem;"></i>
+                Add New User
+            </div>
+            <div class="topbar-right">
+                <i class="fas fa-seedling" style="margin-right: min(1vw, 5px);"></i>
+                <span id="gardenName"></span>
+                <i class="fas fa-seedling" style="margin-left: min(1vw, 5px);"></i>
+                <!-- Logout button of the webpage -->
+                <div class="btn-log-out">
+                    <button type="button" onclick="logout()">
+                        <i class="bi bi-box-arrow-right" style="font-size: min(2.5vw, 40px);"></i>
+                        Log Out
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar of the webpage -->
+
+        <div class="sidebar">
+            <!-- Logo image -->
+            <img src="../images/logo.png" alt="VeGApp Logo" class="sidebar-logo" />
+            <!-- Navigation List -->
+            <ol>
+                <li>
+                    <a href="menu.html" style="color: inherit; text-decoration: none;"><i class="bi bi-house-fill" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> Main Menu</a>
+                </li>
+                <li>
+                    <a href="garden_homepage.html" style="color: inherit; text-decoration: none;"><i class="fas fa-carrot" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> My Garden</a>
+                </li>
+                <li>
+                    <a href="garden_history.html" style="color: inherit; text-decoration: none;"><i class="bi bi-clock-fill" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> Garden History</a>
+                </li>
+                <li>
+                    <a href="garden_permissions.html" style="color: inherit; text-decoration: none;"><i class="bi bi-people-fill" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> User Permissions</a>
+                </li>
+                <li>
+                    <a href="garden_addusers.html" style="color: inherit; text-decoration: none;"><i class="bi bi-person-plus-fill" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> Add New User</a>
+                </li>
+                <li>
+                    <a href="garden_rename.html" style="color: inherit; text-decoration: none;"><i class="fas fa-edit" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> Rename Garden </a>
+                </li>
+                <li>
+                    <a href="garden_delete.html" style="color: inherit; text-decoration: none;"><i class="fas fa-trash-alt" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> Delete Garden </a>
+                </li>
+                <li>
+                    <a href="accountsettings.html" style="color: inherit; text-decoration: none;"><i class="bi bi-gear-fill" style="margin-right: 10px; font-size: min(2vw, 30px);"></i> Account Settings</a>
+                </li>
+            </ol>
+        </div>
+
+        <!-- Main content area -->
+
+        <div class="mainbox">
+            <div class="mainbox-text">Please select the role you want to grant to the new user :</div>
+
+            <!-- Container for radio buttons allowing role selection -->
+
+            <div class="radio-buttons-container">
+                <div class="radio-element">
+                    <span class="role-left-description">Administrator</span>
+                    <label class="radio">
+                        <input type="radio" id="administrator" name="role" value="administrator" checked />
+                        <span class="custom-radio"></span>
+                    </label>
+                    <span class="role-right-description">=> Full Permissions on Garden</span>
+                </div>
+
+                <div class="radio-element">
+                    <span class="role-left-description">Observer</span>
+                    <label class="radio">
+                        <input type="radio" id="observer" name="role" value="observer" />
+                        <span class="custom-radio"></span>
+                    </label>
+                    <span class="role-right-description">=> Taking Notes Permissions</span>
+                </div>
+            </div>
+
+            <!-- Button to trigger QR code creation based on selected role -->
+
+            <div class="btn-select">
+                <button type="button" id="createQRButton" class="button-select">
+                    Create QR code
+                </button>
+            </div>
+        </div>
+        <script>
+            // == Event listener when the content is loaded == //
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const params = new URLSearchParams(window.location.search);
+                const gardenId = decodeURIComponent(params.get("gardenId") || "");
+
+                const token = sessionStorage.getItem("jwtToken");
+
+                var sidebarLinks = document.querySelectorAll(".sidebar ol li a");
+
+                sidebarLinks.forEach(function (link, index) {
+                    const href = link.getAttribute("href");
+                    if (index === 0 || index === 7) {
+                        // These links do not get modified
+                        link.setAttribute("href", `${href}`);
+                    } else {
+                        // Append gardenId as a query parameter for other links
+                        const encodedGardenId = encodeURIComponent(gardenId);
+                        link.setAttribute("href", `${href}?gardenId=${encodedGardenId}`);
+                    }
+                });
+
+                document.getElementById("gardenName").textContent = gardenId;
+
+                // Event listener for the Create QR code button
+                var createQRButton = document.getElementById("createQRButton");
+                createQRButton.addEventListener("click", function () {
+                    var selectedRole = document.querySelector('input[name="role"]:checked').value;
+                    
+                    window.location.href = "garden_addusers_result.html?gardenId=" + encodeURIComponent(gardenId) + "&role=" + encodeURIComponent(selectedRole);
+                });
+            });
+
+            // == Function to logout of the session == //
+
+            function logout() {
+                sessionStorage.removeItem("jwtToken");
+                window.location.href = "login.html";
+            }
+        </script>
+    </body>
+</html>
